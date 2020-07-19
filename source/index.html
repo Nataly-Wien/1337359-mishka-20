@@ -143,19 +143,63 @@
       <h2 class="reviews-title title">
         Отзывы
       </h2>
-
-      <!-- Блок отзывов -->
-
+      <div class="reviews__list slider">
+        <blockquote class="reviews__item slider__slide">
+          <p class="reviews__text">
+            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
+            инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
+            стильными, а также набирают больше лайков!
+          </p>
+          <cite class="reviews__author-name">
+            Анастасия Красильникова
+          </cite>
+          <p class="reviews__author-nickname">
+            @misssssiskras
+          </p>
+        </blockquote>
+        <p class="reviews__controls slider__controls">
+          <button class="slider__toggle slider__toggle--back" type="button">
+            <span class="visually-hidden">Предыдущий отзыв</span>
+          </button>
+          <button class="slider__toggle slider__toggle--forward" type="button">
+            <span class="visually-hidden">Следующий отзыв</span>
+          </button>
+        </p>
+        <a class="reviews__button button" href="#">
+          Написать
+        </a>
+      </div>
     </section>
     <section class="contacts">
       <h2 class="contacts__title title">
         Контакты
       </h2>
-
-      <!-- Блок контактов -->
-
+      <dl class="contacts__list">
+        <div class="contacts__row">
+          <dt class="contacts__type">
+            e-mail:
+          </dt>
+          <dd class="contacts__content">
+            <a href="">
+              info@mimimishkashop.ru
+            </a>
+          </dd>
+        </div>
+        <div class="contacts__row">
+          <dt class="contacts__type">
+            адрес:
+          </dt>
+          <dd class="contacts__content">
+            г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+          </dd>
+        </div>
+      </dl>
+      <img class="contacts__map-placeholder" src="https://via.placeholder.com/200x200" alt="">
+      <div class="contacts__map-container" id="map"></div>
+      <a class="contacts__button button" href="#">
+        Напишите нам
+      </a>
     </section>
-
   </main>
 
   <footer class="page-footer">
