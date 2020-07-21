@@ -1,0 +1,20 @@
+.reviews {
+  @include reset-indent;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  @include font(15px, 30px, normal);
+}
+
+.reviews__author-name {
+  @include font(17px, 24px);
+  font-style: normal;
+}
+
+.reviews__author-nickname {
+  @include font(17px, 30px, normal);
+}

@@ -1,0 +1,7 @@
+.social {
+  @include reset-indent;
+}
+
+.social__list {
+  @include list;
+}

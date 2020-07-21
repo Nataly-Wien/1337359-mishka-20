@@ -1,0 +1,10 @@
+.promo {
+  @include reset-indent;
+}
+
+.promo__title {
+  @include reset-indent;
+  @include font(27px, 30px);
+  text-align: center;
+  color: $black;
+}

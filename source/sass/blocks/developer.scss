@@ -1,0 +1,5 @@
+.developer__text {
+  @include reset-indent;
+  @include font(19px, 24px);
+  color: $black;
+}

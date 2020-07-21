@@ -1,0 +1,14 @@
+.advantages {
+  @include reset-indent;
+}
+
+.advantages__list {
+  @include list;
+  @include reset-indent;
+  @include font(17px, 20px);
+  color: $black;
+}
+
+.advantages__item {
+  @include reset-indent;
+}

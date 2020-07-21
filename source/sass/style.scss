@@ -1,4 +1,18 @@
 @import "variables.scss";
 @import "fonts.scss";
+@import "mixins.scss";
 @import "global.scss";
 @import "blocks/page.scss";
+@import "blocks/main-menu";
+@import "blocks/user-nav.scss";
+@import "blocks/promo.scss";
+@import "blocks/catalog-menu";
+@import "blocks/hit.scss";
+@import "blocks/goods.scss";
+@import "blocks/advantages.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/developer.scss";
+
+@import "common.scss";

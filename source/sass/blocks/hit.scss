@@ -1,0 +1,9 @@
+.hit {
+  @include reset-indent;
+}
+
+.hit__title {
+  @include reset-indent;
+  @include font(17px, 20px);
+  color: $theme-basic;
+}

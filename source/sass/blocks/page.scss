@@ -1,9 +1,9 @@
 .page {
-  min-width: 320px;
+  max-width: 320px;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: $black;
+  color: $text-dark;
   background-color: $white;
 }

@@ -1,0 +1,12 @@
+.main-menu {
+  @include reset-indent;
+  @include list;
+  @include font(17px, 24px, bold);
+}
+.main-menu__item {
+  @include reset-indent;
+}
+
+.main-menu__link {
+  color: $black;
+}
