@@ -4,7 +4,7 @@
   font-weight: $weight;
 }
 
- @mixin pseudo($display: block, $position: absolute, $content: "") {
+@mixin pseudo($display: block, $position: absolute, $content: "") {
   display: $display;
   position: $position;
   content: $content;
