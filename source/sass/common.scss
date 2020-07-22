@@ -16,7 +16,8 @@
   border: 2px solid $text-dark;
 }
 
-.goods-title {
+.catalog-title {
   @include reset-indent;
   @include font(17px, 24px);
+  color: $black;
 }
