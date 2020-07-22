@@ -1,8 +1,9 @@
 .page {
-  max-width: 320px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  @include reset-indent;
+  min-width: 320px;
   height: 100%;
-  margin: 0;
-  padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   color: $text-dark;
   background-color: $white;

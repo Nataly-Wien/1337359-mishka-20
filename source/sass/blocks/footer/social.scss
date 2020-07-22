@@ -5,3 +5,7 @@
 .social__list {
   @include list;
 }
+
+.social__item {
+  @include reset-indent;
+}

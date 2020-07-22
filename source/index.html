@@ -8,7 +8,7 @@
 </head>
 
 <body class="page">
-  <header class="page-header">
+  <header class="page-header container">
     <nav class="main-nav">
       <a class="main-nav__logo">
         <img src="https://via.placeholder.com/86x35" alt="">
@@ -49,11 +49,13 @@
     <h1 class="visually-hidden">
       Мишка, интернет-магазин по продаже милых вещиц для дома ручной работы
     </h1>
-    <section class="promo">
+    <section class="promo container-wide">
       <h2 class="promo__title">
-        Милые штуки ручной работы для дома
+        Милые штуки ручной работы&nbsp;для&nbsp;дома
       </h2>
-      <img class="promo__img" src="https://via.placeholder.com/200x200" alt="">
+      <div class="promo__img-wrapper">
+        <img class="promo__img" src="https://via.placeholder.com/320x285" alt="">
+      </div>
       <ul class="promo__list catalog-menu">
         <li class="catalog-menu__item">
           <a class="catalog-menu__link catalog-menu__link--decor" href="catalog.html">
@@ -67,7 +69,7 @@
         </li>
       </ul>
     </section>
-    <section class="hit">
+    <section class="hit container">
       <h2 class="hit__title">
         Товар недели
       </h2>
@@ -115,122 +117,132 @@
         </a>
       </article>
     </section>
-    <section class="advantages">
-      <h2 class="advantages__title title">
-        Коротко о нас:
-      </h2>
-      <ul class="advantages__list">
-        <li class="advantages__item advantages__item--eco">
-          Экологически чистые материалы
-        </li>
-        <li class="advantages__item advantages__item--scandinavian">
-          Скандинавский стиль по российской цене
-        </li>
-        <li class="advantages__item advantages__item--likes">
-          Увеличивает лайки на фотографиях
-        </li>
-        <li class="advantages__item advantages__item--handmade">
-          Связано вручную с любовью и умилением
-        </li>
-        <li class="advantages__item advantages__item--native">
-          Поддержка отечественного производителя
-        </li>
-        <li class="advantages__item advantages__item--gift">
-          Поставляется в подарочной упаковке
-        </li>
-      </ul>
-    </section>
-    <section class="reviews">
-      <h2 class="reviews__title title">
-        Отзывы
-      </h2>
-      <div class="reviews__list slider">
-        <blockquote class="reviews__item slider__slide">
-          <p class="reviews__text">
-            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
-            инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
-            стильными, а также набирают больше лайков!
+    <div class="container">
+      <section class="advantages">
+        <h2 class="advantages__title title">
+          Коротко о нас:
+        </h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--eco">
+            Экологически чистые материалы
+          </li>
+          <li class="advantages__item advantages__item--scandinavian">
+            Скандинавский стиль по российской цене
+          </li>
+          <li class="advantages__item advantages__item--likes">
+            Увеличивает лайки на фотографиях
+          </li>
+          <li class="advantages__item advantages__item--handmade">
+            Связано вручную с любовью и умилением
+          </li>
+          <li class="advantages__item advantages__item--native">
+            Поддержка отечественного производителя
+          </li>
+          <li class="advantages__item advantages__item--gift">
+            Поставляется в подарочной упаковке
+          </li>
+        </ul>
+      </section>
+      <section class="reviews">
+        <h2 class="reviews__title title">
+          Отзывы
+        </h2>
+        <div class="reviews__list slider">
+          <blockquote class="reviews__item slider__slide">
+            <p class="reviews__text">
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
+              инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
+              стильными, а также набирают больше лайков!
+            </p>
+            <cite class="reviews__author-name">
+              Анастасия Красильникова
+            </cite>
+            <p class="reviews__author-nickname">
+              @misssssiskras
+            </p>
+          </blockquote>
+          <p class="reviews__controls slider__controls">
+            <button class="slider__toggle slider__toggle--back" type="button">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
+            <button class="slider__toggle slider__toggle--forward" type="button">
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
           </p>
-          <cite class="reviews__author-name">
-            Анастасия Красильникова
-          </cite>
-          <p class="reviews__author-nickname">
-            @misssssiskras
-          </p>
-        </blockquote>
-        <p class="reviews__controls slider__controls">
-          <button class="slider__toggle slider__toggle--back" type="button">
-            <span class="visually-hidden">Предыдущий отзыв</span>
-          </button>
-          <button class="slider__toggle slider__toggle--forward" type="button">
-            <span class="visually-hidden">Следующий отзыв</span>
-          </button>
-        </p>
-        <a class="reviews__button button" href="#">
-          Написать
+          <a class="reviews__button button" href="#">
+            Написать
+          </a>
+        </div>
+      </section>
+    </div>
+    <section class="contacts">
+      <div class="container">
+        <h2 class="contacts__title title">
+          Контакты
+        </h2>
+        <dl class="contacts__list">
+          <div class="contacts__row">
+            <dt class="contacts__type">
+              e-mail:
+            </dt>
+            <dd class="contacts__content">
+              <a class="contacts__link" href="mailto:info@mimimishkashop.ru">
+                info@mimimishkashop.ru
+              </a>
+            </dd>
+          </div>
+          <div class="contacts__row">
+            <dt class="contacts__type">
+              адрес:
+            </dt>
+            <dd class="contacts__content">
+              г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <div class="container-wide">
+        <img class="contacts__map-placeholder" src="https://via.placeholder.com/320x200" alt="">
+        <div class="contacts__map-container" id="map"></div>
+      </div>
+      <div class="container">
+        <a class="contacts__button button" href="#">
+          Напишите нам
         </a>
       </div>
     </section>
-    <section class="contacts">
-      <h2 class="contacts__title title">
-        Контакты
-      </h2>
-      <dl class="contacts__list">
-        <div class="contacts__row">
-          <dt class="contacts__type">
-            e-mail:
-          </dt>
-          <dd class="contacts__content">
-            <a class="contacts__link" href="mailto:info@mimimishkashop.ru">
-              info@mimimishkashop.ru
-            </a>
-          </dd>
-        </div>
-        <div class="contacts__row">
-          <dt class="contacts__type">
-            адрес:
-          </dt>
-          <dd class="contacts__content">
-            г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
-          </dd>
-        </div>
-      </dl>
-      <img class="contacts__map-placeholder" src="https://via.placeholder.com/200x200" alt="">
-      <div class="contacts__map-container" id="map"></div>
-      <a class="contacts__button button" href="#">
-        Напишите нам
-      </a>
-    </section>
   </main>
 
-  <footer class="page-footer">
-    <section class="page-footer__social social">
-      <h2 class="visually-hidden">Мы в социальных сетях:</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
-            <span class="visually-hidden">Твитер</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <div class="page-footer__developer developer">
-      <p class="developer__text">
-        Разработано
-      </p>
-      <a href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="developer__logo" src="https://via.placeholder.com/27x34" alt="">
-      </a>
+  <footer class="page-footer container-wide">
+    <div class="container">
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в социальных сетях:</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">
+              <span class="visually-hidden">Твитер</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="page-footer__developer developer">
+        <p class="developer__text">
+          Разработано
+        </p>
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="developer__logo" src="https://via.placeholder.com/27x34" alt="">
+        </a>
+      </div>
     </div>
   </footer>
 

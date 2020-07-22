@@ -1,0 +1,18 @@
+.main-nav {
+  display: grid;
+  grid-template-rows: 80px min-content min-content min-content;
+  @include reset-indent;
+}
+
+.main-nav__logo {
+  justify-self: center;
+  align-self: center;
+}
+
+.main-nav__main-menu,
+.main-nav__user-nav {
+  display: grid;
+  grid-auto-rows: 80px;
+  justify-items: center;
+  align-items: center;
+}

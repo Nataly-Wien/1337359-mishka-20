@@ -17,11 +17,11 @@
 }
 
 .goods__features-name {
-  margin: 0;
+  @include reset-indent;
 }
 
 .goods__features-content {
-  margin: 0;
+  @include reset-indent;
 }
 
 .goods__price {

@@ -1,0 +1,11 @@
+.catalog {
+  @include reset-indent;
+}
+
+.catalog__list {
+  @include list;
+}
+
+.catalog__item {
+  @include reset-indent;
+}

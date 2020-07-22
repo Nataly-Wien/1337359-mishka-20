@@ -3,18 +3,25 @@
 }
 
 .reviews__item {
-  margin: 0;
+  @include reset-indent;
 }
 
 .reviews__text {
+  @include reset-indent;
   @include font(15px, 30px, normal);
 }
 
 .reviews__author-name {
+  @include reset-indent;
   @include font(17px, 24px);
   font-style: normal;
 }
 
 .reviews__author-nickname {
+  @include reset-indent;
   @include font(17px, 30px, normal);
+}
+
+.reviews__controls {
+  @include reset-indent;
 }

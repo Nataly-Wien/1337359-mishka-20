@@ -1,11 +1,11 @@
 .user-nav {
-  @include reset-indent;
   @include list;
   @include font(17px, 24px, bold);
 }
 
 .user-nav__item {
   @include reset-indent;
+  text-align: center;
 }
 
 .user-nav__link {

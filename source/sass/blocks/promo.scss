@@ -1,10 +1,37 @@
 .promo {
-  @include reset-indent;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  padding: 0;
 }
 
 .promo__title {
-  @include reset-indent;
+  z-index: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-self: center;
+  align-self: center;
+  margin: 0 30px;
+  padding: 0;
   @include font(27px, 30px);
   text-align: center;
   color: $black;
+}
+
+.promo__img-wrapper {
+  z-index: 1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  min-height: 280px;
+  background-color: $background-grey-modified;
+}
+
+.promo__list {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  flex-wrap: wrap;
 }

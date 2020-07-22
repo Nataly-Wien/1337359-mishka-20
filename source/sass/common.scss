@@ -7,10 +7,16 @@
 .button {
   display: block;
   width: 100%;
-  margin: 16px auto;
+  margin: 0;
+  padding: 16px;
   @include font(17px, 20px);
   text-align: center;
   color: $text-dark;
   background-color: $white;
   border: 2px solid $text-dark;
+}
+
+.goods-title {
+  @include reset-indent;
+  @include font(17px, 24px);
 }

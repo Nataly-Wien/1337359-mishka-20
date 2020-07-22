@@ -4,12 +4,20 @@
 }
 
 .catalog-menu__item {
-  @include reset-indent;
+  flex-basis: 320px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 24px 30px;
   &:nth-child(1) {
     background-color: $theme-basic;
   }
   &:nth-child(2) {
     background-color: $theme-dark;
+  }
+  &::after {
+    @include pseudo(block, static);
   }
 }
 
