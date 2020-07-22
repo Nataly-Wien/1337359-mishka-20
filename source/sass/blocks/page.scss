@@ -1,6 +1,7 @@
 .page {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+
   @include reset-indent;
   min-width: 320px;
   height: 100%;

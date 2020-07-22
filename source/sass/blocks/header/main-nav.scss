@@ -1,6 +1,7 @@
 .main-nav {
   display: grid;
   grid-template-rows: 80px min-content min-content min-content;
+
   @include reset-indent;
 }
 

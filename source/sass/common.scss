@@ -5,11 +5,11 @@
 }
 
 .button {
+  @include font(17px, 20px);
   display: block;
   width: 100%;
   margin: 0;
   padding: 16px;
-  @include font(17px, 20px);
   text-transform: uppercase;
   text-align: center;
   color: $text-dark;
