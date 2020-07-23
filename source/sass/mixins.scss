@@ -1,0 +1,22 @@
+@mixin font($size, $line-height, $weight: bold) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+}
+
+@mixin pseudo($display: block, $position: absolute, $content: "") {
+  display: $display;
+  position: $position;
+  content: $content;
+}
+
+@mixin list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-indent {
+  margin: 0;
+  padding: 0;
+}

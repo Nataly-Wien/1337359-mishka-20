@@ -1,0 +1,18 @@
+.goods-cart {
+  @include reset-indent;
+}
+
+.goods-cart__link {
+  color: $black;
+}
+
+.goods-cart__description {
+  @include reset-indent;
+  @include font(13px, 30px, normal);
+}
+
+.goods-cart__price {
+  @include reset-indent;
+  @include font(15px, 24px);
+  color: $black;
+}

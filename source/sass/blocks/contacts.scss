@@ -1,0 +1,25 @@
+.contacts {
+  @include reset-indent;
+}
+
+.contacts__title {
+  @include font(18px, 30px);
+  color: $black;
+}
+
+.contacts__list {
+  @include reset-indent;
+  @include font(15px, 30px, normal);
+}
+
+.contacts__type {
+  @include reset-indent;
+}
+
+.contacts__content {
+  @include reset-indent;
+}
+
+.contacts__link {
+  color: $text-dark;
+}

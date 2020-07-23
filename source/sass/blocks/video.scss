@@ -1,0 +1,8 @@
+.video {
+  @include reset-indent;
+}
+
+.video__description {
+  @include reset-indent;
+  @include font(13px, 24px, normal);
+}

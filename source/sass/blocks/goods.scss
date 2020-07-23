@@ -1,0 +1,30 @@
+.goods {
+  @include reset-indent;
+}
+
+.goods__link {
+  color: $black;
+}
+
+.goods__description {
+  @include reset-indent;
+  @include font(15px, 24px, normal);
+}
+
+.goods__features-list {
+  @include reset-indent;
+  @include font(15px, 20px, normal);
+}
+
+.goods__features-name {
+  @include reset-indent;
+}
+
+.goods__features-content {
+  @include reset-indent;
+}
+
+.goods__price {
+  @include reset-indent;
+  @include font(17px, 20px);
+}
