@@ -1,0 +1,26 @@
+.button {
+  box-sizing: border-box;
+  display: block;
+
+  @include font(17px, 20px);
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-dark;
+  background-color: $white;
+  border: 2px solid $text-dark;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $text-dark;
+  }
+
+  &:focus,
+  &:active {
+    color: $text-dark-opacify;
+    background-color: $text-dark;
+  }
+}

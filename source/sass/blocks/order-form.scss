@@ -1,0 +1,69 @@
+.order-form {
+  @include reset-indent;
+  color: $black;
+}
+
+.order-form__control {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+
+  @include font(19px, 20px, normal);
+  border: none;
+  border-bottom: 2px solid $black;
+  color: $text-dark;
+
+  &::placeholder {
+    color: rgba($text-dark, $opacity-placeholder);
+  }
+
+  &:hover {
+    border-bottom: 2px solid $theme-modified;
+  }
+
+  &:focus {
+    color: $text-dark;
+    border-bottom: 2px solid $theme-modified;
+  }
+
+  &--textarea {
+    width: 100%;
+    color: rgba($text-dark, $opacity-placeholder);
+    border: 2px solid $text-dark;
+  }
+
+  &--textarea:hover {
+    border: 2px solid $theme-modified;
+  }
+
+  &--textarea:focus {
+    color: $text-dark;
+    border: 2px solid $theme-modified;
+  }
+}
+
+.order-form__fieldset {
+  @include reset-indent;
+  border: none;
+}
+
+.order-form__title {
+  @include font(17px, 18px);
+  text-transform: uppercase;
+  color: $theme-basic;
+}
+
+.order-form__label {
+  @include reset-indent;
+  @include font(17px, 18px);
+}
+
+.order-form__wrapper {
+  @include list;
+}
+
+.order-form__note {
+  @include reset-indent;
+  @include font(14px, 16px, normal);
+  color: $text-dark;
+}

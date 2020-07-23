@@ -1,0 +1,5 @@
+.title-mini {
+  @include reset-indent;
+  @include font(17px, 24px);
+  color: $black;
+}
