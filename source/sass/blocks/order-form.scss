@@ -39,10 +39,10 @@
   &--textarea:focus {
     color: $text-dark;
     border: 2px solid $theme-modified;
+  }
 
   &--input-big-size {
-    @include font(19px, 20px);
-  }
+    @include font(19px, 20px, normal);
   }
 }
 
