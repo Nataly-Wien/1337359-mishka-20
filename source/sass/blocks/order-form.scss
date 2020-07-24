@@ -8,7 +8,7 @@
   margin: 0;
   font-family: inherit;
 
-  @include font(19px, 20px, normal);
+  @include font(17px, 20px, normal);
   border: none;
   border-bottom: 2px solid $black;
   color: $text-dark;
@@ -40,6 +40,10 @@
     color: $text-dark;
     border: 2px solid $theme-modified;
   }
+
+  &--input-big-size {
+    @include font(19px, 20px, normal);
+  }
 }
 
 .order-form__fieldset {
@@ -66,4 +70,8 @@
   @include reset-indent;
   @include font(14px, 16px, normal);
   color: $text-dark;
+}
+
+.order-form__button {
+  font: inherit;
 }

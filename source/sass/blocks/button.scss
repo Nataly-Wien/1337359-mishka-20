@@ -23,4 +23,21 @@
     color: $text-dark-opacify;
     background-color: $text-dark;
   }
+
+  &--theme-color {
+    color: $white;
+    background-color: $theme-basic;
+    border: 2px solid $theme-basic;
+  }
+
+  &--theme-color:hover {
+    color: $theme-basic;
+    background-color: $white;
+  }
+
+  &--theme-color:focus,
+  &--theme-color:active {
+    color: $theme-opacify;
+    background-color: $theme-basic;
+  }
 }

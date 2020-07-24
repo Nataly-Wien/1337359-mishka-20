@@ -168,6 +168,25 @@
     </div>
   </footer>
 
+  <section class="modal container">
+    <h2 class="modal__title title">Добавить в корзину</h2>
+    <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="choice-form__choice-block">
+        <legend class="choice-form__text">Выберите размер:</legend>
+        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice1" value="s"
+          aria-label="маленький" checked>
+        <label class="choice-form__label" for="choice1">S</label>
+        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice2" value="m"
+          aria-label="средний">
+        <label class="choice-form__label" for="choice2">M</label>
+        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice3" value="l"
+          aria-label="большой">
+        <label class="choice-form__label" for="choice3">L</label>
+      </fieldset>
+      <button class="choice-form__button button button--theme-color" type="submit">Добавить</button>
+    </form>
+  </section>
+
 </body>
 
 </html>
