@@ -71,3 +71,7 @@
   @include font(14px, 16px, normal);
   color: $text-dark;
 }
+
+.order-form__button {
+  font: inherit;
+}
