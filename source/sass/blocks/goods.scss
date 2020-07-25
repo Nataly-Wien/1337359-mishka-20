@@ -9,6 +9,10 @@
 .goods__description {
   @include reset-indent;
   @include font(15px, 24px, normal);
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px, normal);
+  }
 }
 
 .goods__features-list {
@@ -27,4 +31,8 @@
 .goods__price {
   @include reset-indent;
   @include font(17px, 20px);
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 24px);
+  }
 }

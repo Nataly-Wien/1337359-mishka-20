@@ -9,6 +9,10 @@
 .reviews__text {
   @include reset-indent;
   @include font(15px, 30px, normal);
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-name {
@@ -16,6 +20,10 @@
   @include font(17px, 24px);
   font-style: normal;
   color: $black;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .reviews__author-nickname {

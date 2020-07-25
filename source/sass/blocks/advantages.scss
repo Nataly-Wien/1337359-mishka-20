@@ -6,6 +6,10 @@
   @include list;
   @include font(17px, 20px);
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 22px);
+  }
 }
 
 .advantages__item {

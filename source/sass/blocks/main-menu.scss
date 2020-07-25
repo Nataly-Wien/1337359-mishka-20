@@ -1,13 +1,53 @@
 .main-menu {
   @include list;
-  @include font(17px, 24px, bold);
 }
 
 .main-menu__item {
+  @include font(17px, 24px);
   @include reset-indent;
   text-align: center;
+
+  &--tablet {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    font-size: 15px;
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--different-size {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      font-size: 15px;
+    }
+  }
 }
 
 .main-menu__link {
   color: $black;
+
+  &--different-color {
+    font-size: 15px;
+    font-weight: normal;
+    color: $text-dark;
+  }
+}
+
+.user-nav__no-text-link {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }

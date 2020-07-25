@@ -8,10 +8,14 @@
   margin: 0;
   font-family: inherit;
 
-  @include font(17px, 20px, normal);
+  @include font(17px, 18px, normal);
   border: none;
   border-bottom: 2px solid $black;
   color: $text-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
 
   &::placeholder {
     color: rgba($text-dark, $opacity-placeholder);
@@ -42,7 +46,7 @@
   }
 
   &--input-big-size {
-    @include font(19px, 20px, normal);
+    font-size: 19px;
   }
 }
 
@@ -60,6 +64,10 @@
 .order-form__label {
   @include reset-indent;
   @include font(17px, 18px);
+
+  @media (min-width: $tablet-width) {
+    @include font(19px, 20px);
+  }
 }
 
 .order-form__wrapper {
@@ -70,8 +78,13 @@
   @include reset-indent;
   @include font(14px, 16px, normal);
   color: $text-dark;
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px, normal);
+  }
 }
 
 .order-form__button {
   font: inherit;
+  cursor: pointer;
 }

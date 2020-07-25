@@ -1,4 +1,8 @@
 .invite__text {
   @include reset-indent;
   @include font(13px, 24px, normal);
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 30px, normal);
+  }
 }

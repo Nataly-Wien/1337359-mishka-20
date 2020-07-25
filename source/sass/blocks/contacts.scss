@@ -5,11 +5,23 @@
 .contacts__title {
   @include font(18px, 30px);
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font(53px, 57px);
+  }
 }
 
 .contacts__list {
   @include reset-indent;
   @include font(15px, 30px, normal);
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .contacts__type {

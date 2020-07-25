@@ -6,6 +6,10 @@
 .choice-form__text {
   @include reset-indent;
   @include font(15px, 30px, normal);
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .choice-form__label {
@@ -19,4 +23,5 @@
 
 .choice-form__button {
   font: inherit;
+  cursor: pointer;
 }

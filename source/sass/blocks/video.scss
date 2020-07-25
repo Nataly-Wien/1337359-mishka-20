@@ -5,4 +5,8 @@
 .video__description {
   @include reset-indent;
   @include font(13px, 24px, normal);
+
+  @media (min-width: $tablet-width) {
+    @include font(15px, 30px, normal);
+  }
 }

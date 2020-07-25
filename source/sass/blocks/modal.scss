@@ -1,4 +1,9 @@
 .modal__title {
+  @include font(25px, 30px);
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font(30px, 57px);
+  }
 }

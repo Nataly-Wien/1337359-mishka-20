@@ -9,10 +9,18 @@
 .goods-cart__description {
   @include reset-indent;
   @include font(13px, 30px, normal);
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .goods-cart__price {
   @include reset-indent;
   @include font(15px, 24px);
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }

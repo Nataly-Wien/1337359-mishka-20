@@ -17,3 +17,9 @@
   justify-items: center;
   align-items: center;
 }
+
+.main-nav__button {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

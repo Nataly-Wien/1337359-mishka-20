@@ -15,21 +15,36 @@
       </a>
       <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
       <ul class="main-nav__main-menu main-menu">
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="catalog.html">
+        <li class="main-menu__item main-menu__item--different-size">
+          <a class="main-menu__link main-menu__link--active">
             Каталог товаров
           </a>
         </li>
-        <li class="main-menu__item">
+        <li class="main-menu__item main-menu__item--different-size">
           <a class="main-menu__link" href="form.html">
             Вязание на заказ
+          </a>
+        </li>
+        <li class="main-menu__item main-menu__item--desktop">
+          <a class="main-menu__link" href="#">
+            Новые поступления
+          </a>
+        </li>
+        <li class="main-menu__item main-menu__item--desktop">
+          <a class="main-menu__link" href="#">
+            Распродажа
+          </a>
+        </li>
+        <li class="main-menu__item main-menu__item--tablet">
+          <a class="main-menu__link main-menu__link--different-color" href="#">
+            Бесплатная доставка по России
           </a>
         </li>
       </ul>
       <ul class="main-nav__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
-            <span>
+            <span class="user-nav__no-text-link">
               Поиск по сайту
             </span>
           </a>
@@ -49,7 +64,7 @@
     <h1 class="visually-hidden">
       Мишка, интернет-магазин по продаже милых вещиц для дома ручной работы
     </h1>
-    <section class="promo container-wide">
+    <section class="promo container container--wide">
       <h2 class="promo__title">
         Милые штуки ручной работы&nbsp;для&nbsp;дома
       </h2>
@@ -126,17 +141,17 @@
           <li class="advantages__item advantages__item--eco">
             Экологически чистые материалы
           </li>
-          <li class="advantages__item advantages__item--scandinavian">
-            Скандинавский стиль по российской цене
-          </li>
-          <li class="advantages__item advantages__item--likes">
-            Увеличивает лайки на фотографиях
-          </li>
           <li class="advantages__item advantages__item--handmade">
             Связано вручную с любовью и умилением
           </li>
+          <li class="advantages__item advantages__item--scandinavian">
+            Скандинавский стиль по российской цене
+          </li>
           <li class="advantages__item advantages__item--native">
             Поддержка отечественного производителя
+          </li>
+          <li class="advantages__item advantages__item--likes">
+            Увеличивает лайки на фотографиях
           </li>
           <li class="advantages__item advantages__item--gift">
             Поставляется в подарочной упаковке
@@ -201,7 +216,7 @@
           </div>
         </dl>
       </div>
-      <div class="container-wide">
+      <div class="container container--wide">
         <img class="contacts__map-placeholder" src="https://via.placeholder.com/320x200" alt="">
         <div class="contacts__map-container" id="map"></div>
       </div>
@@ -213,7 +228,7 @@
     </section>
   </main>
 
-  <footer class="page-footer container-wide">
+  <footer class="page-footer container container--wide">
     <div class="container">
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Мы в социальных сетях:</h2>
@@ -247,7 +262,7 @@
   </footer>
 
   <section class="modal container">
-    <h2 class="modal__title title">Добавить в корзину</h2>
+    <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="choice-form__choice-block">
         <legend class="choice-form__text">Выберите размер:</legend>

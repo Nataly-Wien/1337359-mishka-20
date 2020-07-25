@@ -1,10 +1,15 @@
 .catalog-menu {
   @include list;
   @include font(19px, 24px);
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 30px);
+  }
 }
 
 .catalog-menu__item {
-  flex-basis: 320px;
+  flex-basis: $mobile-width;
   flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
