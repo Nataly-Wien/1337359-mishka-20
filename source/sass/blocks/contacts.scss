@@ -1,25 +1,136 @@
 .contacts {
-  @include reset-indent;
+  margin-top: 0;
+  margin-bottom: 39px;
+  padding-top: 35px;
+  padding-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 68px;
+    margin-bottom: 73px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    justify-content: start;
+    padding-top: 71px;
+    margin-bottom: 106px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 78px;
+    margin-bottom: 90px;
+  }
 }
 
 .contacts__title {
+  margin-bottom: 27px;
+
   @include font(18px, 30px);
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2;
+    align-self: end;
+    margin-bottom: 49px;
+
+    @include font(53px, 57px);
+  }
 }
 
 .contacts__list {
-  @include reset-indent;
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+
   @include font(15px, 30px, normal);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+    font-size: 17px;
+  }
+
+  @media (min-width: $tablet-width - 50px) and (max-width: $desktop-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2;
+    align-self: end;
+  }
+}
+
+.contacts__row {
+  display: flex;
+
+  @media (min-width: $tablet-width - 50px) and (max-width: $desktop-width) {
+    width: 50%;
+    padding-right: 35px;
+  }
 }
 
 .contacts__type {
+  flex-basis: 77px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
   @include reset-indent;
 }
 
 .contacts__content {
   @include reset-indent;
+
+  br {
+    @media (min-width: $mobile-width + 250px) {
+      display: none;
+    }
+  }
 }
 
 .contacts__link {
   color: $text-dark;
+}
+
+.contacts__map-wrapper {
+  margin: 0 -30px 39px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin: 0;
+  }
+}
+
+.contacts__map-placeholder {
+  @media (min-width: $mobile-width + 1) and (max-width: $desktop-width) {
+    width: 768px;
+    height: 457px;
+    object-fit: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 525px;
+    height: 457px;
+  }
+}
+
+.contacts__button {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2;
+    align-self: end;
+  }
 }

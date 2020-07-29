@@ -1,15 +1,35 @@
 .catalog-menu {
+  display: flex;
+  flex-direction: column;
+
   @include list;
   @include font(19px, 24px);
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+
+    @include font(20px, 30px);
+  }
 }
 
 .catalog-menu__item {
-  flex-basis: 320px;
-  flex-grow: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0;
-  padding: 24px 30px;
+
+  @media (max-width: $tablet-width - 1) {
+    padding: 24px 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-basis: $mobile-width;
+    flex-grow: 1;
+    padding: 24px 30px 24px 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 24px 36px 24px 36px;
+  }
 
   &:nth-child(1) {
     background-color: $theme-basic;
@@ -25,5 +45,11 @@
 }
 
 .catalog-menu__link {
+  max-width: 130px;
+  display: block;
   color: $white;
+
+  @media (min-width: $tablet-width) {
+    max-width: 160px;
+  }
 }

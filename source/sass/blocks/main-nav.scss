@@ -1,19 +1,112 @@
 .main-nav {
-  display: grid;
-  grid-template-rows: 80px min-content min-content min-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
 
   @include reset-indent;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .main-nav__logo {
-  justify-self: center;
   align-self: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+    flex-grow: 1;
+    padding: 0;
+    padding-top: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    padding-top: 9px;
+  }
+
+  &--mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    @media (max-width: $tablet-width - 1), (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    @media (max-width: $desktop-width - 1) {
+      display: none;
+    }
+  }
 }
 
-.main-nav__main-menu,
+.main-nav__main-menu {
+  @media (min-width: $tablet-width) {
+    order: 2;
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    flex-basis: 42%;
+  }
+}
+
 .main-nav__user-nav {
-  display: grid;
-  grid-auto-rows: 80px;
-  justify-items: center;
-  align-items: center;
+  @media (min-width: $tablet-width) {
+    order: 1;
+    flex-basis: 50%;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 2;
+    flex-basis: 42%;
+  }
+}
+
+.main-nav__text {
+  margin: 0;
+  padding: 0;
+
+  @include font(15px, 24px, normal);
+  color: $text-dark;
+
+  @media (max-width: $tablet-width - 1) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    padding-top: 28px;
+    // position: absolute;
+    // right: 0;
+    // bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-end;
+    margin-left: auto;
+    padding-top: 0;
+  }
+}
+
+.main-nav__button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

@@ -2,6 +2,18 @@
   @include reset-indent;
 }
 
+.goods-cart__photo {
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    height: 462px;
+  }
+}
+
 .goods-cart__link {
   color: $black;
 }
@@ -9,10 +21,18 @@
 .goods-cart__description {
   @include reset-indent;
   @include font(13px, 30px, normal);
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .goods-cart__price {
   @include reset-indent;
   @include font(15px, 24px);
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }

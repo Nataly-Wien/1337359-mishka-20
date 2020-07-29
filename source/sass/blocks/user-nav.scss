@@ -1,13 +1,43 @@
 .user-nav {
   @include list;
   @include font(17px, 24px, bold);
+
+  @media (max-width: $tablet-width - 1) {
+    width: 260px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    margin-left: 0;
+  }
 }
 
 .user-nav__item {
-  @include reset-indent;
-  text-align: center;
+  margin: 0;
+  padding: 28px 30px 26px 46px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
 }
 
 .user-nav__link {
   color: $black;
+}
+
+.user-nav__no-text-link {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }

@@ -1,5 +1,12 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html {
   height: 100%;
+  box-sizing: border-box;
 }
 
 img {
@@ -24,11 +31,20 @@ a {
 }
 
 .container {
-  width: 260px;
-  margin: 0 auto;
+  min-width: $mobile-width;
+  padding: 0 30px;
 
-  &-wide {
-    width: 320px;
-    margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: $desktop-width;
+  }
+}
+
+.container-wide {
+  width: 100%;
+  padding: 0;
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка (страница каталога)</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,26 +11,42 @@
 <body class="page">
   <header class="page-header container">
     <nav class="main-nav">
-      <a class="main-nav__logo" href="index.html">
-        <img src="https://via.placeholder.com/86x35" alt="">
+      <a class="main-nav__logo main-nav__logo--mobile" href="index.html">
+        <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="">
+      </a>
+      <a class="main-nav__logo main-nav__logo--tablet" href="index.html">
+        <img src="https://via.placeholder.com/112x46" width="112" height="46" alt="">
+      </a>
+      <a class="main-nav__logo main-nav__logo--desktop" href="index.html">
+        <img src="https://via.placeholder.com/148x72" width="148" height="72" alt="">
       </a>
       <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
       <ul class="main-nav__main-menu main-menu">
-        <li class="main-menu__item">
+        <li class="main-menu__item main-menu__item--different-size">
           <a class="main-menu__link main-menu__link--active">
             Каталог товаров
           </a>
         </li>
-        <li class="main-menu__item">
+        <li class="main-menu__item main-menu__item--different-size">
           <a class="main-menu__link" href="form.html">
             Вязание на заказ
+          </a>
+        </li>
+        <li class="main-menu__item main-menu__item--desktop">
+          <a class="main-menu__link" href="#">
+            Новые поступления
+          </a>
+        </li>
+        <li class="main-menu__item main-menu__item--desktop">
+          <a class="main-menu__link" href="#">
+            Распродажа
           </a>
         </li>
       </ul>
       <ul class="main-nav__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
-            <span>
+            <span class="user-nav__no-text-link">
               Поиск по сайту
             </span>
           </a>
@@ -42,13 +59,20 @@
           </a>
         </li>
       </ul>
+      <p class="main-nav__text">
+        Бесплатная доставка по России
+      </p>
     </nav>
   </header>
 
   <main class="page-main">
-    <h1 class="page-main__title container-wide">
-      Каталог товаров
-    </h1>
+    <div class="page-main__title-wrapper container-wide">
+      <div class="container">
+        <h1 class="page-main__title title">
+          Каталог товаров
+        </h1>
+      </div>
+    </div>
     <div class="container">
       <section class="catalog">
         <h2 class="visually-hidden">Список товаров каталога</h2>
@@ -61,7 +85,8 @@
                 </h3>
               </a>
               <a href="#">
-                <img class="goods-cart__photo" src="https://via.placeholder.com/260x195" alt="">
+                <img class="goods-cart__photo" src="https://via.placeholder.com/260x195" width="260" height="195"
+                  alt="">
               </a>
               <p class="goods-cart__description">
                 Рост 30 см, вес 200 г
@@ -136,7 +161,10 @@
   </main>
 
   <footer class="page-footer container-wide">
-    <div class="container">
+    <div class="page-footer__wrapper container">
+      <a class="page-footer__logo">
+        <img src="https://via.placeholder.com/102x34" width="102" height="34" alt="">
+      </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Мы в социальных сетях:</h2>
         <ul class="social__list">
@@ -162,14 +190,14 @@
           Разработано
         </p>
         <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="developer__logo" src="https://via.placeholder.com/27x34" alt="">
+          <img class="developer__logo" src="https://via.placeholder.com/27x34" width="27" height="34" alt="">
         </a>
       </div>
     </div>
   </footer>
 
   <section class="modal container">
-    <h2 class="modal__title title">Добавить в корзину</h2>
+    <h2 class="modal__title">Добавить в корзину</h2>
     <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="choice-form__choice-block">
         <legend class="choice-form__text">Выберите размер:</legend>
