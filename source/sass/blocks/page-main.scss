@@ -3,8 +3,11 @@
 }
 
 .page-main__title {
-  padding: 73px 0;
+  padding: 100px 0 73px;
   text-align: center;
   color: $black;
+}
+
+.page-main__title-wrapper {
   background-color: $background-grey;
 }

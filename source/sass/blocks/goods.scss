@@ -1,38 +1,125 @@
 .goods {
   @include reset-indent;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 58px;
+    margin-left: 175px;
+  }
 }
 
 .goods__link {
+  z-index: 2;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
   color: $black;
 }
 
+.goods__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 61px;
+    margin-bottom: 35px;
+  }
+}
+
 .goods__description {
-  @include reset-indent;
+  margin: 0;
+  margin-bottom: 28px;
+
   @include font(15px, 24px, normal);
 
   @media (min-width: $tablet-width) {
+    grid-column: 1;
+    margin-bottom: 48px;
+
     @include font(17px, 30px, normal);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
   }
 }
 
 .goods__features-list {
+  grid-column: 1;
+
   @include reset-indent;
+  margin-bottom: 29px;
+
   @include font(15px, 20px, normal);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 109px;
+  }
+}
+
+.goods__features-item {
+  padding: 8px;
+  padding-bottom: 10px;
+  display: flex;
 }
 
 .goods__features-name {
   @include reset-indent;
+  flex-basis: 97px;
+  flex-grow: 0;
 }
 
 .goods__features-content {
   @include reset-indent;
 }
 
+.goods__photo {
+  @media (min-width: $tablet-width) {
+    grid-column: 2;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    width: 333px;
+    height: 404px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 6;
+    width: 525px;
+    height: 636px;
+  }
+}
+
 .goods__price {
   @include reset-indent;
+  margin-bottom: 24px;
+
   @include font(17px, 20px);
 
   @media (min-width: $tablet-width) {
+    grid-column: 1;
+
     @include font(20px, 24px);
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.goods__button {
+  grid-column: 1;
 }

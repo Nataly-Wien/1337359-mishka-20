@@ -3,6 +3,9 @@
 @import "mixins.scss";
 @import "global.scss";
 @import "blocks/page.scss";
+@import "blocks/title.scss";
+@import "blocks/title-mini.scss";
+@import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/main-menu.scss";
@@ -25,6 +28,3 @@
 @import "blocks/order-form.scss";
 @import "blocks/modal.scss";
 @import "blocks/choice-form.scss";
-@import "blocks/button.scss";
-@import "blocks/title.scss";
-@import "blocks/title-mini.scss";

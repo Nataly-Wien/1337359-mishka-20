@@ -1,5 +1,12 @@
+.developer {
+  display: flex;
+}
+
 .developer__text {
-  @include reset-indent;
+  margin: 0;
+  margin-right: 27px;
+  padding: 0;
+
   @include font(19px, 24px);
   color: $black;
 }

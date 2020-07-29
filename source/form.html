@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка (страница для заказа вязания)</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,18 +11,24 @@
 <body class="page">
   <header class="page-header container">
     <nav class="main-nav">
-      <a class="main-nav__logo" href="index.html">
-        <img src="https://via.placeholder.com/86x35" alt="">
+      <a class="main-nav__logo main-nav__logo--mobile" href="index.html">
+        <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="">
+      </a>
+      <a class="main-nav__logo main-nav__logo--tablet" href="index.html">
+        <img src="https://via.placeholder.com/112x46" width="112" height="46" alt="">
+      </a>
+      <a class="main-nav__logo main-nav__logo--desktop" href="index.html">
+        <img src="https://via.placeholder.com/148x72" width="148" height="72" alt="">
       </a>
       <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
       <ul class="main-nav__main-menu main-menu">
         <li class="main-menu__item main-menu__item--different-size">
-          <a class="main-menu__link main-menu__link--active">
+          <a class="main-menu__link" href="catalog.html">
             Каталог товаров
           </a>
         </li>
         <li class="main-menu__item main-menu__item--different-size">
-          <a class="main-menu__link" href="form.html">
+          <a class="main-menu__link main-menu__link--active">
             Вязание на заказ
           </a>
         </li>
@@ -33,11 +40,6 @@
         <li class="main-menu__item main-menu__item--desktop">
           <a class="main-menu__link" href="#">
             Распродажа
-          </a>
-        </li>
-        <li class="main-menu__item main-menu__item--tablet">
-          <a class="main-menu__link main-menu__link--different-color" href="#">
-            Бесплатная доставка по России
           </a>
         </li>
       </ul>
@@ -57,13 +59,20 @@
           </a>
         </li>
       </ul>
+      <p class="main-nav__text">
+        Бесплатная доставка по России
+      </p>
     </nav>
   </header>
 
   <main class="page-main">
-    <h1 class="page-main__title title container container--wide">
-      Вязание на заказ
-    </h1>
+    <div class="page-main__title-wrapper container-wide">
+      <div class="container">
+        <h1 class="page-main__title title">
+          Вязание на заказ
+        </h1>
+      </div>
+    </div>
     <div class="container">
       <div class="invite">
         <p class="invite__text">
@@ -145,8 +154,11 @@
     </div>
   </main>
 
-  <footer class="page-footer container container--wide">
-    <div class="container">
+  <footer class="page-footer container-wide">
+    <div class="page-footer__wrapper container">
+      <a class="page-footer__logo">
+        <img src="https://via.placeholder.com/102x34" width="102" height="34" alt="">
+      </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Мы в социальных сетях:</h2>
         <ul class="social__list">
@@ -172,7 +184,7 @@
           Разработано
         </p>
         <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="developer__logo" src="https://via.placeholder.com/27x34" alt="">
+          <img class="developer__logo" src="https://via.placeholder.com/27x34" width="27" height="34" alt="">
         </a>
       </div>
     </div>

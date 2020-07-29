@@ -10,3 +10,21 @@
     @include font(15px, 30px, normal);
   }
 }
+
+.video__button {
+  max-width: none;
+  width: auto;
+  margin-left: 45px;
+  margin-right: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 42px;
+    margin-right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 240px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

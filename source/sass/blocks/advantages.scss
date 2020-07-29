@@ -1,17 +1,48 @@
 .advantages {
-  @include reset-indent;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 31px;
+  padding-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 67px;
+    margin-bottom: 90px;
+  }
 }
 
 .advantages__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   @include list;
   @include font(17px, 20px);
   color: $black;
 
   @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     @include font(20px, 22px);
   }
 }
 
 .advantages__item {
-  @include reset-indent;
+  margin: 0;
+  padding-top: 82px;
+
+  @media (max-width: $tablet-width - 1) {
+    &:nth-child(even) {
+      order: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 95px 40px 0 0;
+  }
 }
