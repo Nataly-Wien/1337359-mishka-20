@@ -22,31 +22,32 @@
   @media (min-width: $tablet-width) {
     align-self: flex-start;
     flex-grow: 1;
+    width: 112px;
+    height: 46px;
     padding: 0;
     padding-top: 22px;
   }
 
   @media (min-width: $desktop-width) {
     order: 1;
+    width: 148px;
+    height: 72px;
     padding-top: 9px;
   }
+}
 
-  &--mobile {
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
+.main-nav__logo-img {
+  width: 86px;
+  height: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 112px;
+    height: 46px;
   }
 
-  &--tablet {
-    @media (max-width: $tablet-width - 1), (min-width: $desktop-width) {
-      display: none;
-    }
-  }
-
-  &--desktop {
-    @media (max-width: $desktop-width - 1) {
-      display: none;
-    }
+  @media (min-width: $desktop-width) {
+    width: 148px;
+    height: 72px;
   }
 }
 
