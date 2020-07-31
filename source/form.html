@@ -11,14 +11,8 @@
 <body class="page">
   <header class="page-header container">
     <nav class="main-nav">
-      <a class="main-nav__logo main-nav__logo--mobile" href="index.html">
-        <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="">
-      </a>
-      <a class="main-nav__logo main-nav__logo--tablet" href="index.html">
-        <img src="https://via.placeholder.com/112x46" width="112" height="46" alt="">
-      </a>
-      <a class="main-nav__logo main-nav__logo--desktop" href="index.html">
-        <img src="https://via.placeholder.com/148x72" width="148" height="72" alt="">
+      <a class="main-nav__logo" href="index.html">
+        <img class="main-nav__logo-img" src="https://via.placeholder.com/86x35" width="86" height="35" alt="">
       </a>
       <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
       <ul class="main-nav__main-menu main-menu">
@@ -73,17 +67,18 @@
         </h1>
       </div>
     </div>
-    <div class="container">
-      <div class="invite">
-        <p class="invite__text">
-          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
-          уточнить детали.
-        </p>
-      </div>
-      <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+    <div class="invite container">
+      <p class="invite__text">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
+        уточнить детали.
+      </p>
+    </div>
+    <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+
+      <div class="order-form__container">
         <fieldset class="order-form__fieldset">
-          <legend class="order-form__title">Тип</legend>
-          <ul class="order-form__wrapper">
+          <legend class="order-form__legend order-form__title">Тип</legend>
+          <ul class="order-form__list">
             <li class="order-form__custom-check">
               <input class="order-form__radio-hidden visually-hidden" type="radio" name="type" id="type1" value="decor"
                 checked>
@@ -95,68 +90,96 @@
             </li>
           </ul>
         </fieldset>
+      </div>
+
+      <div class="order-form__wrapper-background">
+        <div class="order-form__container">
+          <fieldset class="order-form__fieldset">
+            <legend class="order-form__legend order-form__title">Цвет</legend>
+            <ul class="order-form__list order-form__list--columns">
+              <li class="order-form__custom-check">
+                <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color1" id="color1"
+                  checked>
+                <label class="order-form__label" for="color1">Белый</label>
+              </li>
+              <li class="order-form__custom-check">
+                <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color2" id="color2"
+                  checked>
+                <label class="order-form__label" for="color2">Серый</label>
+              </li>
+              <li class="order-form__custom-check">
+                <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color3" id="color3">
+                <label class="order-form__label" for="color3">«Тиффани»</label>
+              </li>
+              <li class="order-form__custom-check">
+                <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color4" id="color4">
+                <label class="order-form__label" for="color4">Черный</label>
+              </li>
+              <li class="order-form__custom-check">
+                <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color5" id="color5">
+                <label class="order-form__label" for="color5">Розовый</label>
+              </li>
+              <li class="order-form__custom-check">
+                <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color6" id="color6">
+                <label class="order-form__label" for="color6">Оранжевый</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="order-form__container">
         <fieldset class="order-form__fieldset">
-          <legend class="order-form__title">Цвет</legend>
-          <ul class="order-form__wrapper">
-            <li class="order-form__custom-check">
-              <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color1" id="color1"
-                checked>
-              <label class="order-form__label" for="color1">Белый</label>
+          <legend class="order-form__legend order-form__title">ФИО</legend>
+          <ul class="order-form__input-list">
+            <li class="order-form__input-wrapper">
+              <label class="order-form__label" for="name">Имя:</label>
+              <input class="order-form__control order-form__control--input" type="text" name="name" id="name"
+                placeholder="Введите ваше имя*" required>
             </li>
-            <li class="order-form__custom-check">
-              <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color2" id="color2"
-                checked>
-              <label class="order-form__label" for="color2">Серый</label>
+            <li class="order-form__input-wrapper">
+              <label class="order-form__label" for="surname">Фамилия:</label>
+              <input class="order-form__control order-form__control--input" type="text" name="surname" id="surname"
+                placeholder="Укажите фамилию*" required>
             </li>
-            <li class="order-form__custom-check">
-              <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color3" id="color3">
-              <label class="order-form__label" for="color3">«Тиффани»</label>
-            </li>
-            <li class="order-form__custom-check">
-              <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color4" id="color4">
-              <label class="order-form__label" for="color4">Черный</label>
-            </li>
-            <li class="order-form__custom-check">
-              <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color5" id="color5">
-              <label class="order-form__label" for="color5">Розовый</label>
-            </li>
-            <li class="order-form__custom-check">
-              <input class="order-form__checkbox-hidden visually-hidden" type="checkbox" name="color6" id="color6">
-              <label class="order-form__label" for="color6">Оранжевый</label>
+            <li class="order-form__input-wrapper">
+              <label class="order-form__label" for="patronymic">Отчество:</label>
+              <input class="order-form__control order-form__control--input" type="text" name="patronymic"
+                id="patronymic" placeholder="Отчество, если желаете">
             </li>
           </ul>
         </fieldset>
-        <fieldset class="order-form__fieldset">
-          <legend class="order-form__title">ФИО</legend>
-          <label class="order-form__label" for="name">Имя:</label>
-          <input class="order-form__control order-form__control--input" type="text" name="name" id="name"
-            placeholder="Введите ваше имя*" required>
-          <label class="order-form__label" for="surname">Фамилия:</label>
-          <input class="order-form__control order-form__control--input" type="text" name="surname" id="surname"
-            placeholder="Укажите фамилию*" required>
-          <label class="order-form__label" for="patronymic">Отчество:</label>
-          <input class="order-form__control order-form__control--input" type="text" name="patronymic" id="patronymic"
-            placeholder="Отчество, если желаете">
-        </fieldset>
-        <label class="order-form__title" for="tel">Тел</label>
-        <input class="order-form__control order-form__control--input order-form__control--input-big-size" type="tel"
-          name="tel" id="tel" pattern="[+][7] [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-          required>
-        <label class="order-form__title" for="email">E-mail</label>
-        <input class="order-form__control order-form__control--input" type="email" name="email" id="email"
-          placeholder="Ваш Email*" required>
+      </div>
+
+      <div class="order-form__wrapper-background">
+        <div class="order-form__wrapper order-form__container">
+          <label class="order-form__title" for="tel">Тел</label>
+          <input class="order-form__control order-form__control--input order-form__control--input-big-size" type="tel"
+            name="tel" id="tel" pattern="[+][7] [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+            required>
+        </div>
+      </div>
+      <div class="order-form__wrapper-background">
+        <div class="order-form__wrapper order-form__wrapper--no-padding order-form__container">
+          <label class="order-form__title" for="email">E-mail</label>
+          <input class="order-form__control order-form__control--input" type="email" name="email" id="email"
+            placeholder="Ваш Email*" required>
+        </div>
+      </div>
+      <div class="order-form__wrapper order-form__container">
         <label class="order-form__title" for="addinfo">Доп</label>
         <textarea class="order-form__control order-form__control--textarea" name="additional" id="addinfo" cols="30"
           rows="6">Опишите все ваши пожелания к заказу</textarea>
         <p class="order-form__note">*Поля обязательны для заполнения</p>
         <button class="order-form__button button" type="submit">Отправить заказ</button>
-      </form>
-    </div>
+      </div>
+    </form>
+
   </main>
 
-  <footer class="page-footer container-wide">
+  <footer class="page-footer">
     <div class="page-footer__wrapper container">
-      <a class="page-footer__logo">
+      <a class="page-footer__logo" href="index.html">
         <img src="https://via.placeholder.com/102x34" width="102" height="34" alt="">
       </a>
       <section class="page-footer__social social">

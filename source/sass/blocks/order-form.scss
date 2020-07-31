@@ -3,6 +3,21 @@
   color: $black;
 }
 
+.order-form__container {
+  min-width: $mobile-width;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 225px;
+    margin: 0 auto;
+    max-width: $desktop-width;
+  }
+}
+
 .order-form__control {
   margin: 0;
   font-family: inherit;
@@ -11,6 +26,7 @@
   border: none;
   border-bottom: 2px solid $black;
   color: $text-dark;
+  background-color: transparent;
 
   @media (min-width: $tablet-width) {
     font-size: 19px;
@@ -33,6 +49,17 @@
     width: 100%;
     color: rgba($text-dark, $opacity-placeholder);
     border: 2px solid $text-dark;
+    margin-bottom: 17px;
+
+    @media (min-width: $tablet-width) {
+      width: 75%;
+      margin-bottom: 53px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 80%;
+      margin-bottom: 49px;
+    }
   }
 
   &--textarea:hover {
@@ -44,33 +71,141 @@
     border: 2px solid $theme-modified;
   }
 
+  &--input {
+    @media (min-width: $tablet-width) {
+      width: 75%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 80%;
+    }
+  }
+
   &--input-big-size {
     font-size: 19px;
   }
 }
 
+.order-form__wrapper {
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 50px;
+  }
+
+  &--no-padding {
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
+  }
+}
+
+.order-form__wrapper-background {
+  @media (min-width: $tablet-width) {
+    background-color: $background-grey;
+  }
+}
+
+.order-form__legend {
+  @media (min-width: $tablet-width) {
+    float: left;
+  }
+}
+
 .order-form__fieldset {
   @include reset-indent;
+  padding-bottom: 10px;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 26px;
+  }
+}
+
+.order-form__list {
+  @include list;
+  display: flex;
+  flex-direction: column;
+
+  &--columns {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.order-form__custom-check {
+  @include reset-indent;
+  padding-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 24px;
+  }
 }
 
 .order-form__title {
+  display: block;
+  padding-bottom: 22px;
+
   @include font(17px, 18px);
   text-transform: uppercase;
   color: $theme-basic;
+
+  @media (min-width: $tablet-width) {
+    width: 25%;
+
+    @include font(19px, 20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20%;
+  }
 }
 
 .order-form__label {
   @include reset-indent;
+  padding-right: 24px;
+
   @include font(17px, 18px);
 
-  @media (min-width: $tablet-width) {
-    @include font(19px, 20px);
+  @media (max-width: $tablet-width - 1) {
+    display: block;
   }
 }
 
-.order-form__wrapper {
+.order-form__input-list {
   @include list;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form__input-wrapper {
+  @include reset-indent;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+  }
+
+  .order-form__control--input {
+    flex-grow: 1;
+  }
+
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
 }
 
 .order-form__note {
@@ -78,7 +213,14 @@
   @include font(14px, 16px, normal);
   color: $text-dark;
 
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 30px;
+  }
+
   @media (min-width: $tablet-width) {
+    order: 1;
+    margin-left: auto;
+
     @include font(17px, 30px, normal);
   }
 }
@@ -86,4 +228,8 @@
 .order-form__button {
   font: inherit;
   cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 20%;
+  }
 }
