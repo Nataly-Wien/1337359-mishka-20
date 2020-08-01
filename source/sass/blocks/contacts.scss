@@ -1,7 +1,7 @@
 .contacts {
   margin-top: 0;
   margin-bottom: 39px;
-  padding-top: 35px;
+  padding-top: 43px;
   padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
@@ -39,7 +39,7 @@
 
 .contacts__list {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 3px;
   padding: 0;
 
   @include font(15px, 30px, normal);
@@ -61,6 +61,7 @@
 
 .contacts__row {
   display: flex;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet-width - 50px) and (max-width: $desktop-width) {
     width: 50%;
@@ -88,6 +89,17 @@
 
 .contacts__link {
   color: $text-dark;
+  border-bottom: 1px solid $theme-modified;
+
+  &:hover,
+  &:focus {
+    color: $theme-dark-hover;
+    border-bottom: 1px solid $theme-dark-hover;
+  }
+
+  &:active {
+    border-bottom: 1px solid rgba($theme-dark-hover, $opacity-shadow);
+  }
 }
 
 .contacts__map-wrapper {
@@ -107,6 +119,8 @@
 }
 
 .contacts__map-placeholder {
+  display: block;
+
   @media (min-width: $mobile-width + 1) and (max-width: $desktop-width) {
     width: 768px;
     height: 457px;

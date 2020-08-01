@@ -1,8 +1,14 @@
 .reviews {
+  position: relative;
   margin-top: 0;
   margin-bottom: 45px;
-  padding-top: 31px;
+  padding-top: 28px;
   padding-bottom: 0;
+
+  &::after {
+    @include line(320px, 6px);
+    bottom: -50px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 82px;
@@ -22,6 +28,8 @@
 }
 
 .reviews__list {
+  margin-top: 15px;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,11 +75,18 @@
 
 .reviews__author-nickname {
   @include reset-indent;
+  padding-top: 2px;
+
   @include font(17px, 30px, normal);
 }
 
 .reviews__controls {
+  display: flex;
+  justify-content: space-around;
+
   @include reset-indent;
+  margin-top: 30px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     z-index: 3;
@@ -79,6 +94,34 @@
     grid-column: 2;
     justify-self: end;
     align-self: end;
+  }
+}
+
+.slider__toggle {
+  width: 50%;
+  height: 52px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $grey;
+
+  &:hover,
+  &:focus {
+    opacity: $opacity-hover;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+  }
+
+  &--back {
+    background-image: url("../img/icon-left-arrow.svg");
+    border-right: none;
+  }
+
+  &--forward {
+    background-image: url("../img/icon-right-arrow.svg");
   }
 }
 

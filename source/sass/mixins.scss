@@ -20,3 +20,13 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin line($width, $height) {
+  display: block;
+  position: absolute;
+  content: "";
+  width: $width;
+  height: $height;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: contain;
+}

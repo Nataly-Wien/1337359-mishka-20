@@ -37,7 +37,7 @@
 
 .goods__description {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 
   @include font(15px, 24px, normal);
 
@@ -71,9 +71,9 @@
 }
 
 .goods__features-item {
-  padding: 8px;
-  padding-bottom: 10px;
   display: flex;
+  padding: 8px 0 11px;
+  border-bottom: 1px solid $grey;
 }
 
 .goods__features-name {
@@ -87,6 +87,8 @@
 }
 
 .goods__photo {
+  margin-bottom: 23px;
+
   @media (min-width: $tablet-width) {
     grid-column: 2;
     grid-row-start: 2;
@@ -106,6 +108,7 @@
 .goods__price {
   @include reset-indent;
   margin-bottom: 24px;
+  text-align: center;
 
   @include font(17px, 20px);
 

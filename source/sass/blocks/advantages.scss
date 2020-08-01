@@ -1,7 +1,7 @@
 .advantages {
   margin-top: 0;
   margin-bottom: 30px;
-  padding-top: 31px;
+  padding-top: 35px;
   padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
@@ -33,8 +33,47 @@
 }
 
 .advantages__item {
+  position: relative;
   margin: 0;
-  padding-top: 82px;
+  padding-top: 83px;
+
+  &::before {
+    @include pseudo;
+    width: 55px;
+    height: 37px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 30px;
+    left: -3px;
+  }
+
+  &--eco::before {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--handmade::before {
+    background-image: url("../img/icon-feature-ball.svg");
+    left: -7px;
+  }
+
+  &--scandinavian::before {
+    background-image: url("../img/icon-feature-money.svg");
+    background-position-y: top;
+  }
+
+  &--native::before {
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-position: -3px 3px;
+  }
+
+  &--likes::before {
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--gift::before {
+    background-image: url("../img/icon-feature-gift.svg");
+    background-position: 6px 1px;
+  }
 
   @media (max-width: $tablet-width - 1) {
     &:nth-child(even) {

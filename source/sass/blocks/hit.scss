@@ -14,6 +14,12 @@
     padding-top: 54px;
     margin-bottom: 73px;
   }
+
+  &::after {
+    @include line(320px, 6px);
+    bottom: -40px;
+    left: 0;
+  }
 }
 
 .hit__title {

@@ -14,6 +14,8 @@
   justify-self: center;
   align-self: center;
   max-width: 250px;
+  margin: 0;
+  margin-top: 34px;
 
   @include font(27px, 30px);
   text-align: center;
@@ -46,7 +48,7 @@
   display: block;
   width: 575px;
   height: 373px;
-  margin: 0 auto 110px;
+  margin: 0 auto 116px;
 
   @media (min-width: $tablet-width) {
     width: 1150px;

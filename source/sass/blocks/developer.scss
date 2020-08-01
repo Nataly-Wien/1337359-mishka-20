@@ -1,12 +1,32 @@
 .developer {
   display: flex;
+  margin-top: 19px;
 }
 
 .developer__text {
-  margin: 0;
-  margin-right: 27px;
+  align-self: center;
+  margin: 0 22px 0 5px;
   padding: 0;
 
   @include font(19px, 24px);
   color: $black;
+}
+
+.developer__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: $theme-dark-hover;
+    }
+  }
+
+  &:active {
+    path {
+      fill: rgba($theme-dark-hover, $opacity-active);
+    }
+  }
 }

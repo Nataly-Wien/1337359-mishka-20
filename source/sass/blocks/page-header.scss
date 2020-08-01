@@ -5,3 +5,16 @@
     margin-bottom: -44px;
   }
 }
+
+.page-header__container {
+  min-width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: $desktop-width;
+  }
+}
