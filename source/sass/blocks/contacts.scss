@@ -7,7 +7,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    padding-top: 117px;
+    padding-top: 67px;
     margin-bottom: 55px;
   }
 
@@ -16,7 +16,7 @@
     grid-template-columns: 1fr 2fr 3fr;
     justify-content: start;
     padding-top: 71px;
-    margin-bottom: 105px;
+    margin-bottom: 104px;
   }
 }
 
@@ -26,16 +26,37 @@
   @include font(18px, 30px);
   color: $black;
 
-  @media (min-width: $tablet-width) {
-    @include font(43px, 50px);
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include pseudo(block, relative, "");
+      width: 47px;
+      height: 81px;
+      top: -25px;
+      background-image: url("../img/icon-flag.svg");
+    }
 
-    margin-bottom: 50px;
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: -18px;
+      left: -112px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    @include font(43px, 50px);
   }
 
   @media (min-width: $desktop-width) {
+    display: block;
     grid-column: 2;
     align-self: end;
-    margin-bottom: 49px;
+    margin-top: 40px;
+    margin-bottom: 0;
 
     @include font(53px, 57px);
   }
@@ -110,8 +131,12 @@
   margin: 0 -30px 39px;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
-    margin-bottom: 55px;
+    margin: 0 -50px 55px;
+  }
+
+  @media (min-width: $tablet-width + 1) and (max-width: $desktop-width - 1) {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -145,6 +170,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2;
+    justify-self: start;
     align-self: end;
   }
 }

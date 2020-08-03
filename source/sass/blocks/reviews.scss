@@ -1,34 +1,67 @@
 .reviews {
-  position: relative;
   margin-top: 0;
   margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    background-image: url("../img/review@1x.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 90px;
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
   padding-top: 28px;
   padding-bottom: 0;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 90px;
+    padding-top: 82px;
+    padding-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 75px;
+    padding-bottom: 96px;
+    background-image: url("../img/review@1x.jpg");
+    background-position: 50px 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   &::after {
-    @include line(320px, 6px);
+    @include line(100%, 6px);
     bottom: -50px;
 
     @media (min-width: $tablet-width) {
       @include line(100%, 17px);
-      bottom: -135px;
+      bottom: -90px;
+      left: 0;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    padding-top: 82px;
-    margin-bottom: 85px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 78px;
-    margin-bottom: 90px;
+    @media (min-width: $desktop-width) {
+      @include line(1050px, 23px);
+      left: 50px;
+    }
   }
 }
 
 .reviews__title {
   @media (min-width: $tablet-width) {
     margin-bottom: -72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
   }
 }
 
@@ -40,6 +73,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     grid-row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 15px;
+    padding-left: 175px;
   }
 }
 
@@ -143,5 +181,6 @@
     justify-self: end;
     padding-left: 40px;
     padding-right: 40px;
+    background-color: transparent;
   }
 }

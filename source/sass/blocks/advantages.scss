@@ -16,7 +16,15 @@
 }
 
 .advantages__title {
-  margin-bottom: -12px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: -12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -15px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
 }
 
 .advantages__list {
@@ -33,6 +41,11 @@
     grid-template-columns: 1fr 1fr;
 
     @include font(20px, 22px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
+    padding-right: 175px;
   }
 }
 
@@ -94,6 +107,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 95px 40px 0 0;
+    padding: 111px 40px 0 0;
   }
 }

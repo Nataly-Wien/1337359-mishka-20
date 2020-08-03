@@ -36,6 +36,11 @@ $padding: 26px;
     box-shadow: none;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-top: 32px;
+    padding-bottom: 22px;
+  }
+
   &--tablet {
     @media (max-width: $tablet-width - 1) {
       display: none;

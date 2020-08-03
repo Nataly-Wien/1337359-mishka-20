@@ -1,28 +1,28 @@
 .hit {
   position: relative;
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 0;
   padding-top: 31px;
-  padding-bottom: 0;
+  padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     padding-top: 53px;
-    margin-bottom: 65px;
+    padding-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 54px;
-    margin-bottom: 73px;
+    padding-top: 72px;
+    padding-bottom: 98px;
   }
 
   &::after {
     @include line(100%, 6px);
-    bottom: -40px;
+    bottom: -5px;
     left: 0;
 
     @media (min-width: $tablet-width) {
       @include line(100%, 17px);
-      bottom: -67px;
+      bottom: 0;
     }
 
     @media (min-width: $desktop-width) {
@@ -53,7 +53,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 123px;
+    top: 142px;
     left: 82px;
   }
 }
