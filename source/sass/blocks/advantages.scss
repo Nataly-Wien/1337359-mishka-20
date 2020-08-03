@@ -15,6 +15,10 @@
   }
 }
 
+.advantages__title {
+  margin-bottom: -12px;
+}
+
 .advantages__list {
   display: flex;
   flex-direction: row;
@@ -45,6 +49,10 @@
     background-repeat: no-repeat;
     top: 30px;
     left: -3px;
+
+    @media (min-width: $tablet-width) {
+      top: 56px;
+    }
   }
 
   &--eco::before {
@@ -79,6 +87,10 @@
     &:nth-child(even) {
       order: 1;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 111px;
   }
 
   @media (min-width: $desktop-width) {

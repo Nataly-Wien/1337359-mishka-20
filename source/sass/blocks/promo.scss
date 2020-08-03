@@ -16,6 +16,7 @@
   max-width: 250px;
   margin: 0;
   margin-top: 34px;
+  margin-left: -5px;
 
   @include font(27px, 30px);
   text-align: center;
@@ -23,6 +24,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 640px;
+    margin-top: 33px;
 
     @include font(43px, 50px);
   }

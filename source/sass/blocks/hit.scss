@@ -6,8 +6,8 @@
   padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 40px;
-    margin-bottom: 52px;
+    padding-top: 53px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,9 +16,19 @@
   }
 
   &::after {
-    @include line(320px, 6px);
+    @include line(100%, 6px);
     bottom: -40px;
     left: 0;
+
+    @media (min-width: $tablet-width) {
+      @include line(100%, 17px);
+      bottom: -67px;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include line(1050px, 23px);
+      left: 50px;
+    }
   }
 }
 
@@ -29,13 +39,17 @@
   @include font(17px, 20px);
   text-transform: uppercase;
   color: $theme-basic;
-  top: 65px;
+
+  @media (max-width: $tablet-width - 1) {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     max-width: 100px;
-    top: 46px;
-    right: 63px;
     text-align: center;
+    line-height: 17px;
+    top: 59px;
+    right: 63px;
   }
 
   @media (min-width: $desktop-width) {

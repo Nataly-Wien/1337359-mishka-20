@@ -1,6 +1,10 @@
 .developer {
   display: flex;
   margin-top: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .developer__text {
@@ -10,12 +14,17 @@
 
   @include font(19px, 24px);
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 28px;
+  }
 }
 
 .developer__logo {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 35px;
 
   &:hover,
   &:focus {

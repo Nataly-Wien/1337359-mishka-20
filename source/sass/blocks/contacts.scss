@@ -5,8 +5,10 @@
   padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 68px;
-    margin-bottom: 57px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 117px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
@@ -26,6 +28,8 @@
 
   @media (min-width: $tablet-width) {
     @include font(43px, 50px);
+
+    margin-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -45,7 +49,7 @@
   @include font(15px, 30px, normal);
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 48px;
+    margin-bottom: 17px;
     font-size: 17px;
   }
 
@@ -135,7 +139,8 @@
 
 .contacts__button {
   @media (min-width: $tablet-width) {
-    margin: 0 auto;
+    align-self: center;
+    padding: 14px 40px;
   }
 
   @media (min-width: $desktop-width) {

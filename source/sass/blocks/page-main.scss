@@ -3,9 +3,19 @@
 }
 
 .page-main__title {
-  padding: 100px 0 73px;
+  padding: 73px 0 73px;
   text-align: center;
   color: $black;
+
+  @include font(27px, 30px);
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px);
+  }
 }
 
 .page-main__title-wrapper {

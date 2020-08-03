@@ -4,7 +4,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 42px;
+    grid-template-rows: repeat(5, min-content);
   }
 
   @media (min-width: $desktop-width) {
@@ -23,10 +23,24 @@
 }
 
 .goods__title {
-  margin-bottom: 40px;
+  position: relative;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 40px;
+
+    &::after {
+      @include pseudo(block, absolute, "Товар недели");
+      margin-top: 5px;
+
+      @include font(17px, 20px);
+      text-transform: uppercase;
+      color: $theme-basic;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 38px;
+    margin-right: 125px;
   }
 
   @media (min-width: $desktop-width) {
@@ -43,7 +57,9 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1;
-    margin-bottom: 48px;
+    align-self: start;
+    margin-bottom: 0;
+    margin-right: 42px;
 
     @include font(17px, 30px, normal);
   }
@@ -54,15 +70,17 @@
 }
 
 .goods__features-list {
-  grid-column: 1;
-
   @include reset-indent;
   margin-bottom: 29px;
 
   @include font(15px, 20px, normal);
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 55px;
+    grid-column: 1;
+    align-self: start;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-right: 42px;
   }
 
   @media (min-width: $desktop-width) {
@@ -87,19 +105,23 @@
 }
 
 .goods__photo {
+  display: block;
   margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     grid-column: 2;
     grid-row-start: 2;
     grid-row-end: 6;
-    width: 333px;
+    width: 334px;
     height: 404px;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-row-start: 1;
     grid-row-end: 6;
+    margin-bottom: 0;
     width: 525px;
     height: 636px;
   }
@@ -114,15 +136,25 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1;
+    align-self: end;
+    margin-right: 42px;
+    margin-bottom: 0;
 
     @include font(20px, 24px);
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 30px;
   }
 }
 
 .goods__button {
   grid-column: 1;
+  align-self: end;
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+    margin-right: 42px;
+    margin-bottom: 0;
+  }
 }

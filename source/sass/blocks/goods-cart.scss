@@ -1,11 +1,23 @@
 .goods-cart {
   @include reset-indent;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-direction: row;
+    margin-bottom: 53px;
+  }
 }
 
 .goods-cart__photo {
-  @media (min-width: $tablet-width) {
+  display: block;
+  // width: 260px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-basis: 50%;
+    flex-shrink: 0;
     width: 334px;
-    height: 334px;
   }
 
   @media (min-width: $desktop-width) {
@@ -14,16 +26,74 @@
   }
 }
 
+.goods-cart__wrapper {
+  display: block;
+  padding: 28px 28px 26px;
+  border: 1px solid $grey;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba($black, $opacity-shadow);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba($black, $opacity-shadow);
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px 33px 22px 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 27px 32px 25px 28px;
+  }
+}
+
 .goods-cart__link {
   color: $black;
+}
+
+.goods-cart__title {
+  &:hover,
+  &:focus {
+    color: rgba($black, $opacity-hover);
+  }
+
+  &:active {
+    color: rgba($black, $opacity-active);
+  }
 }
 
 .goods-cart__description {
   @include reset-indent;
   @include font(13px, 30px, normal);
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    flex-grow: 1;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: auto;
+  }
+}
+
+.goods-cart__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $grey;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    align-self: stretch;
   }
 }
 
@@ -34,5 +104,24 @@
 
   @media (min-width: $tablet-width) {
     font-size: 17px;
+  }
+}
+
+.goods-cart__button {
+  display: block;
+  width: 30px;
+  height: 36px;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: $theme-basic;
+    }
+  }
+
+  &:active {
+    path {
+      fill: rgba($theme-basic, $opacity-active);
+    }
   }
 }
