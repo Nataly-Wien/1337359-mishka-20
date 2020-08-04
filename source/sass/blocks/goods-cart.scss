@@ -2,21 +2,51 @@
   @include reset-indent;
   display: flex;
   flex-direction: column;
+  margin-bottom: 28px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     flex-direction: row;
-    margin-bottom: 53px;
+    margin-bottom: 54px;
+  }
+}
+
+.goods-cart__link {
+  margin-bottom: 5px;
+  color: $black;
+}
+
+.goods-cart__title {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($black, $opacity-hover);
+  }
+
+  &:active {
+    color: rgba($black, $opacity-active);
   }
 }
 
 .goods-cart__photo {
   display: block;
-  // width: 260px;
   width: 100%;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    flex-basis: 50%;
+  @media (min-width: $mobile-width + 140px) {
+    width: 400px;
+  }
+
+  @media (min-width: $tablet-width) {
     flex-shrink: 0;
+    height: 334px;
     width: 334px;
   }
 
@@ -28,7 +58,7 @@
 
 .goods-cart__wrapper {
   display: block;
-  padding: 28px 28px 26px;
+  padding: 28px 27px 15px 28px;
   border: 1px solid $grey;
 
   &:hover {
@@ -39,39 +69,28 @@
     box-shadow: 0 3px 5px rgba($black, $opacity-shadow);
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media (min-width: $mobile-width + 140px) {
+    width: 400px;
+  }
+
+  @media (min-width: $tablet-width) {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 27px 33px 22px 34px;
+    width: auto;
+    padding: 27px 33px 12px 32px;
   }
 
   @media (min-width: $desktop-width) {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 27px 32px 25px 28px;
-  }
-}
-
-.goods-cart__link {
-  color: $black;
-}
-
-.goods-cart__title {
-  &:hover,
-  &:focus {
-    color: rgba($black, $opacity-hover);
-  }
-
-  &:active {
-    color: rgba($black, $opacity-active);
+    padding: 27px 32px 10px 28px;
   }
 }
 
 .goods-cart__description {
   @include reset-indent;
+  margin-bottom: 20px;
+
   @include font(13px, 30px, normal);
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
@@ -90,10 +109,17 @@
 .goods-cart__price-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
   border-top: 1px solid $grey;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media (min-width: $tablet-width) {
     align-self: stretch;
+    padding-top: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 15px;
   }
 }
 
@@ -111,6 +137,7 @@
   display: block;
   width: 30px;
   height: 36px;
+  text-align: right;
 
   &:hover,
   &:focus {

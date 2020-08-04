@@ -108,6 +108,11 @@
 .goods__photo {
   display: block;
   margin-bottom: 28px;
+  width: 100%;
+
+  @media (min-width: $mobile-width + 140px) {
+    width: 400px;
+  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2;

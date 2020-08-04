@@ -1,8 +1,23 @@
 .promo {
+  position: relative;
   display: grid;
   grid-template-rows: min-content min-content;
 
   @include reset-indent;
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include line(100%, 25px, url("../img/bg-zigzag-fill.svg"));
+      z-index: 5;
+      left: 0;
+      bottom: -14px;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include line(100%, 37px, url("../img/bg-zigzag-fill.svg"));
+      bottom: -20px;
+    }
+  }
 }
 
 .promo__title {
@@ -15,7 +30,7 @@
   align-self: center;
   max-width: 250px;
   margin: 0;
-  margin-top: 34px;
+  margin-top: 37px;
 
   @include font(27px, 30px);
   text-align: center;

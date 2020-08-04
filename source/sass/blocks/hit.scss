@@ -16,17 +16,17 @@
   }
 
   &::after {
-    @include line(100%, 6px);
+    @include line(100%, 6px, url("../img/bg-zigzag-line.svg"));
     bottom: -5px;
     left: 0;
 
     @media (min-width: $tablet-width) {
-      @include line(100%, 17px);
+      @include line(100%, 17px, url("../img/bg-zigzag-line.svg"));
       bottom: 0;
     }
 
     @media (min-width: $desktop-width) {
-      @include line(1050px, 23px);
+      @include line(1050px, 23px, url("../img/bg-zigzag-line.svg"));
       left: 50px;
     }
   }

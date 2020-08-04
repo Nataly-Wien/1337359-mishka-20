@@ -1,15 +1,15 @@
 .catalog {
-  margin: 0 0 58px;
+  margin: 0 0 30px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 63px;
-    padding-top: 67px;
+    margin-bottom: 55px;
+    padding-top: 77px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 105px;
-    padding-top: 111px;
+    margin-bottom: 32px;
+    padding-top: 128px;
   }
 }
 
