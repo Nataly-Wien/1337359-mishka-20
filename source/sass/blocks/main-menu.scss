@@ -21,6 +21,10 @@ $padding: 26px;
   @media (min-width: $tablet-width) {
     margin-bottom: -1 * ($padding + $lineheight);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -60px;
+  }
 }
 
 .main-menu__item {
@@ -33,12 +37,13 @@ $padding: 26px;
     flex-basis: 50%;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 22px;
     box-shadow: none;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 32px;
-    padding-bottom: 22px;
+    padding-bottom: 32px;
   }
 
   &--tablet {
@@ -53,11 +58,29 @@ $padding: 26px;
     @media (max-width: $desktop-width - 1) {
       display: none;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 20px;
+    }
   }
 
   &--different-size {
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       font-size: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+
+      &:nth-child(even):not(.main-menu__item--desktop)::before {
+        @include pseudo;
+        width: 1px;
+        height: 100%;
+        background-color: $grey-modified;
+        top: 0;
+        left: -35px;
+        bottom: 40px;
+      }
     }
   }
 }

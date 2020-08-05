@@ -10,7 +10,7 @@
       @include line(100%, 25px, url("../img/bg-zigzag-fill.svg"));
       z-index: 5;
       left: 0;
-      bottom: -14px;
+      bottom: -11px;
     }
 
     @media (min-width: $desktop-width) {
@@ -38,14 +38,14 @@
 
   @media (min-width: $tablet-width) {
     max-width: 640px;
-    margin-top: 33px;
+    margin-top: 29px;
 
     @include font(43px, 50px);
   }
 
   @media (min-width: $desktop-width) {
     max-width: 950px;
-    margin-top: 42px;
+    margin-top: 39px;
 
     @include font(53px, 57px);
   }

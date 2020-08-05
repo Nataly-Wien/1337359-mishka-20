@@ -21,7 +21,7 @@
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;
-    flex-grow: 1;
+    // flex-grow: 1;
     width: 112px;
     height: 46px;
     padding: 0;
@@ -89,13 +89,13 @@
 
   @media (min-width: $tablet-width) {
     order: 3;
-    padding-top: 28px;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
     align-self: flex-end;
     margin-left: auto;
-    padding-top: 0;
+    padding-top: 2px;
   }
 }
 

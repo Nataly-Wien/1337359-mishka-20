@@ -51,7 +51,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 25px 30px 13px 36px;
+    padding: 26px 30px 15px 36px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 30px 15px 36px;
   }
 }
 

@@ -22,8 +22,10 @@
   box-shadow: 0 1px 0 $grey, inset 0 1px 0 $grey;
 
   @media (min-width: $tablet-width) {
-    padding: 33px 0 22px 76px;
+    flex-shrink: 0;
+    padding: 33px 0 32px 83px;
     box-shadow: none;
+    border-left: 1px solid $grey-modified;
   }
 }
 
@@ -67,10 +69,10 @@
   left: 30px;
 
   @media (min-width: $tablet-width) {
-    left: 25px;
+    left: 32px;
 
     &--search {
-      left: 20px;
+      left: 33px;
       top: 35px;
     }
   }

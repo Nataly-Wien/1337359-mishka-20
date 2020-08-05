@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 90px;
+    margin-bottom: 95px;
   }
 }
 
@@ -25,12 +25,12 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 90px;
-    padding-top: 82px;
-    padding-bottom: 46px;
+    padding-top: 83px;
+    padding-bottom: 48px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 75px;
+    padding-top: 76px;
     padding-bottom: 96px;
     background-image: url("../img/review@1x.jpg");
     background-position: 50px 0;
@@ -45,12 +45,13 @@
 
     @media (min-width: $tablet-width) {
       @include line(100%, 17px, url("../img/bg-zigzag-line.svg"));
-      bottom: -90px;
+      bottom: -85px;
     }
 
     @media (min-width: $desktop-width) {
       @include line(1050px, 23px, url("../img/bg-zigzag-line.svg"));
       left: 50px;
+      bottom: -92px;
     }
   }
 }
@@ -66,13 +67,14 @@
 }
 
 .reviews__list {
-  margin-top: 15px;
+  margin-top: 12px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     grid-row-gap: 40px;
+    margin-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -101,7 +103,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 44px;
+    margin-bottom: 45px;
   }
 }
 
@@ -111,8 +113,12 @@
   font-style: normal;
   color: $black;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
   }
 }
 
@@ -129,7 +135,7 @@
 
   @include reset-indent;
   margin-top: 30px;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     z-index: 3;

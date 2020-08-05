@@ -1,6 +1,6 @@
 .video {
   @include reset-indent;
-  margin-bottom: 58px;
+  margin-bottom: 55px;
   border: 1px solid $grey;
 
   &:hover {
@@ -55,7 +55,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 24px;
-    padding-top: 40px;
+    padding-top: 42px;
     padding-left: 109px;
   }
 

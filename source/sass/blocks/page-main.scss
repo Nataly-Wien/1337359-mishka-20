@@ -1,5 +1,9 @@
 .page-main {
   @include reset-indent;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $grey-border;
+  }
 }
 
 .page-main__title {
@@ -12,23 +16,27 @@
 
   @media (min-width: $tablet-width) {
     @include font(43px, 50px);
-    padding: 103px 0 45px;
+    padding: 103px 0 70px;
   }
 
   @media (min-width: $desktop-width) {
     @include font(53px, 57px);
+    padding: 103px 0 42px;
   }
 }
 
 .page-main__title-wrapper {
   position: relative;
   background-color: $background-grey;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 52px;
   }
-
 
   &::after {
     @media (min-width: $tablet-width) {
