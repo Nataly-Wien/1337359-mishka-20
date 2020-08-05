@@ -1,16 +1,24 @@
 .social {
   @include reset-indent;
+  width: 100%;
+
+  @media (max-width: $tablet-width - 1) {
+    border-bottom: 1px solid $grey-modified;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 3px;
+    margin-left: 75px;
+  }
 }
 
 .social__list {
-  min-width: 150px;
-  min-height: 25px;
-  outline: 1px solid green;
-  // потом убрать
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 22px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
@@ -20,4 +28,22 @@
 
 .social__item {
   @include reset-indent;
+  margin-right: 41px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.social__link:hover,
+.social__link:focus {
+  path {
+    fill: $theme-dark-hover;
+  }
+}
+
+.social__link:active {
+  path {
+    fill: rgba($theme-dark-hover, $opacity-active);
+  }
 }

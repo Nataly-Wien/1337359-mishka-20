@@ -1,32 +1,85 @@
 .reviews {
   margin-top: 0;
   margin-bottom: 45px;
-  padding-top: 31px;
-  padding-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 82px;
-    margin-bottom: 85px;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    background-image: url("../img/review@1x.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 78px;
+    margin-bottom: 95px;
+  }
+}
+
+.reviews__wrapper {
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 0;
+
+  @media (min-width: $tablet-width) {
     margin-bottom: 90px;
+    padding-top: 83px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 76px;
+    padding-bottom: 96px;
+    background-image: url("../img/review@1x.jpg");
+    background-position: 50px 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    @include line(100%, 6px, url("../img/bg-zigzag-line.svg"));
+    left: 0;
+    bottom: -50px;
+
+    @media (min-width: $tablet-width) {
+      @include line(100%, 17px, url("../img/bg-zigzag-line.svg"));
+      bottom: -85px;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include line(1050px, 23px, url("../img/bg-zigzag-line.svg"));
+      left: 50px;
+      bottom: -92px;
+    }
   }
 }
 
 .reviews__title {
   @media (min-width: $tablet-width) {
-    margin-bottom: -50px;
+    margin-bottom: -72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
   }
 }
 
 .reviews__list {
+  margin-top: 12px;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
     grid-row-gap: 40px;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 15px;
+    padding-left: 175px;
   }
 }
 
@@ -50,7 +103,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 44px;
+    margin-bottom: 45px;
   }
 }
 
@@ -60,18 +113,29 @@
   font-style: normal;
   color: $black;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
   }
 }
 
 .reviews__author-nickname {
   @include reset-indent;
+  padding-top: 2px;
+
   @include font(17px, 30px, normal);
 }
 
 .reviews__controls {
+  display: flex;
+  justify-content: space-around;
+
   @include reset-indent;
+  margin-top: 30px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     z-index: 3;
@@ -79,6 +143,39 @@
     grid-column: 2;
     justify-self: end;
     align-self: end;
+    margin-bottom: 0;
+  }
+}
+
+.reviews__toggle {
+  width: 50%;
+  height: 52px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $grey;
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: $opacity-hover;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+  }
+
+  &--back {
+    background-image: url("../img/icon-left-arrow.svg");
+    border-right: none;
+  }
+
+  &--forward {
+    background-image: url("../img/icon-right-arrow.svg");
   }
 }
 
@@ -88,5 +185,8 @@
     grid-row: 1;
     grid-column: 2;
     justify-self: end;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: transparent;
   }
 }

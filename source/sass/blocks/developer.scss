@@ -1,12 +1,41 @@
 .developer {
   display: flex;
+  margin-top: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .developer__text {
-  margin: 0;
-  margin-right: 27px;
+  align-self: center;
+  margin: 2px 28px 0 -4px;
   padding: 0;
 
   @include font(19px, 24px);
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 28px;
+  }
+}
+
+.developer__logo {
+  display: block;
+  width: 26px;
+  height: 35px;
+
+  &:hover,
+  &:focus {
+    path {
+      fill: $theme-dark-hover;
+    }
+  }
+
+  &:active {
+    path {
+      fill: rgba($theme-dark-hover, $opacity-active);
+    }
+  }
 }

@@ -13,41 +13,101 @@
 }
 
 .catalog-menu__item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin: 0;
 
-  @media (max-width: $tablet-width - 1) {
-    padding: 24px 30px;
+  &:nth-child(1) {
+    background-color: $theme-basic;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $theme-basic-hover;
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $theme-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $theme-dark-hover;
+    }
   }
 
   @media (min-width: $tablet-width) {
     flex-basis: $mobile-width;
     flex-grow: 1;
-    padding: 24px 30px 24px 36px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 24px 36px 24px 36px;
-  }
-
-  &:nth-child(1) {
-    background-color: $theme-basic;
-  }
-
-  &:nth-child(2) {
-    background-color: $theme-dark;
-  }
-
-  &::after {
-    @include pseudo(block, static);
   }
 }
 
 .catalog-menu__link {
-  max-width: 130px;
   display: block;
+  width: 100%;
   color: $white;
+
+  @media (max-width: $tablet-width - 1) {
+    padding: 23px 27px 0 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 30px 15px 36px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 25px 30px 15px 36px;
+  }
+}
+
+.catalog-menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  &::after {
+    @include pseudo(block, static);
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  &--decor::after {
+    background-image: url("../img/icon-interior.svg");
+    background-position: 30px 0;
+
+    @media (min-width: $tablet-width) {
+      background-position: 34px 5px;
+    }
+
+    // @media (min-width: $desktop-width) {
+    // }
+  }
+
+  &--toy::after {
+    background-image: url("../img/icon-toy.svg");
+    background-position: 20px -2px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 17px 7px;
+    }
+
+    // @media (min-width: $desktop-width) {
+    // }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.7;
+  }
+
+  &:active::after {
+    opacity: $opacity-active;
+  }
+}
+
+.catalog-menu__text {
+  max-width: 130px;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     max-width: 160px;

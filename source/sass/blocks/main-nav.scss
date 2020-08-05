@@ -17,11 +17,11 @@
 .main-nav__logo {
   align-self: center;
   padding-top: 22px;
-  padding-bottom: 22px;
+  padding-bottom: 17px;
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;
-    flex-grow: 1;
+    // flex-grow: 1;
     width: 112px;
     height: 46px;
     padding: 0;
@@ -89,23 +89,75 @@
 
   @media (min-width: $tablet-width) {
     order: 3;
-    padding-top: 28px;
-    // position: absolute;
-    // right: 0;
-    // bottom: 0;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
     align-self: flex-end;
     margin-left: auto;
-    padding-top: 0;
+    padding-top: 2px;
   }
 }
 
 .main-nav__button {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  width: 30px;
+  height: 30px;
+  top: 24px;
+  right: 25px;
+  border: none;
+  background-color: transparent;
+
+  // Бургер
+
+  // &::before {
+  //   @include pseudo;
+  //   width: 20px;
+  //   height: 2px;
+  //   top: 8px;
+  //   left: 4px;
+  //   background-color: $black;
+  //   box-shadow: 0 4px 0 0 $black;
+  // }
+
+  // &::after {
+  //   @include pseudo;
+  //   width: 20px;
+  //   height: 2px;
+  //   top: 16px;
+  //   left: 4px;
+  //   background-color: $black;
+  // }
+
+  &::before {
+    @include pseudo;
+    width: 28px;
+    height: 2px;
+    top: 14px;
+    left: 0;
+    background-color: $black;
+    box-shadow: 0 4px 0 0 transparent;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    @include pseudo;
+    width: 28px;
+    height: 2px;
+    top: 14px;
+    left: 0;
+    background-color: $black;
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: $opacity-hover;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;

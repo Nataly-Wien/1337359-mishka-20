@@ -3,7 +3,7 @@
   @include font(17px, 24px, bold);
 
   @media (max-width: $tablet-width - 1) {
-    width: 260px;
+    width: 320px;
     margin-left: auto;
   }
 
@@ -16,16 +16,38 @@
 }
 
 .user-nav__item {
+  position: relative;
   margin: 0;
-  padding: 28px 30px 26px 46px;
+  padding: 29px 35px 26px 76px;
+  box-shadow: 0 1px 0 $grey, inset 0 1px 0 $grey;
 
   @media (min-width: $tablet-width) {
-    padding-right: 0;
+    flex-shrink: 0;
+    padding: 33px 0 32px 83px;
+    box-shadow: none;
+    border-left: 1px solid $grey-modified;
   }
 }
 
 .user-nav__link {
   color: $black;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, $opacity-hover);
+
+    path {
+      fill: $theme-basic;
+    }
+  }
+
+  &:active {
+    color: rgba($black, $opacity-active);
+
+    path {
+      fill: rgba($theme-basic, $opacity-active);
+    }
+  }
 }
 
 .user-nav__no-text-link {
@@ -39,5 +61,19 @@
     white-space: nowrap;
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+}
+
+.user-nav__icon {
+  position: absolute;
+  left: 30px;
+
+  @media (min-width: $tablet-width) {
+    left: 32px;
+
+    &--search {
+      left: 33px;
+      top: 35px;
+    }
   }
 }

@@ -1,8 +1,16 @@
 .page-footer {
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 23px;
+  padding-top: 27px;
+  padding-bottom: 24px;
   background-color: $background-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 55px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 50px;
+  }
 }
 
 .page-footer__wrapper {
@@ -19,5 +27,9 @@
 .page-footer__logo {
   @media (max-width: $tablet-width - 1) {
     display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-shrink: 0;
   }
 }

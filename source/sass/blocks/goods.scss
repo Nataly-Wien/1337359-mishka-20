@@ -4,12 +4,11 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 42px;
+    grid-template-rows: repeat(5, min-content);
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 2fr 3fr;
-    grid-column-gap: 58px;
     margin-left: 175px;
   }
 }
@@ -23,57 +22,77 @@
 }
 
 .goods__title {
-  margin-bottom: 40px;
+  position: relative;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 40px;
+
+    &::after {
+      @include pseudo(block, absolute, "Товар недели");
+      margin-top: 5px;
+
+      @include font(17px, 20px);
+      text-transform: uppercase;
+      color: $theme-basic;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 38px;
+    margin-right: 125px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 61px;
-    margin-bottom: 35px;
+    margin-top: 60px;
+    margin-bottom: 10px;
   }
 }
 
 .goods__description {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 
   @include font(15px, 24px, normal);
 
   @media (min-width: $tablet-width) {
     grid-column: 1;
-    margin-bottom: 48px;
+    align-self: start;
+    margin-bottom: 0;
+    margin-right: 42px;
 
     @include font(17px, 30px, normal);
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 60px;
+    margin-bottom: 15px;
+    margin-right: 58px;
   }
 }
 
 .goods__features-list {
-  grid-column: 1;
-
   @include reset-indent;
   margin-bottom: 29px;
 
   @include font(15px, 20px, normal);
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 55px;
+    grid-column: 1;
+    align-self: start;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-right: 42px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 109px;
+    margin-bottom: 20px;
+    margin-right: 58px;
   }
 }
 
 .goods__features-item {
-  padding: 8px;
-  padding-bottom: 10px;
   display: flex;
+  padding: 8px 0 11px;
+  border-bottom: 1px solid $grey;
 }
 
 .goods__features-name {
@@ -87,12 +106,22 @@
 }
 
 .goods__photo {
+  display: block;
+  margin-bottom: 28px;
+  width: 100%;
+
+  @media (min-width: $mobile-width + 140px) {
+    width: 400px;
+  }
+
   @media (min-width: $tablet-width) {
     grid-column: 2;
     grid-row-start: 2;
     grid-row-end: 6;
-    width: 333px;
+    width: 334px;
     height: 404px;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -100,26 +129,46 @@
     grid-row-end: 6;
     width: 525px;
     height: 636px;
+    margin-top: 0;
   }
 }
 
 .goods__price {
   @include reset-indent;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
+  text-align: center;
 
   @include font(17px, 20px);
 
   @media (min-width: $tablet-width) {
     grid-column: 1;
+    align-self: end;
+    margin-right: 42px;
+    margin-bottom: 5px;
 
     @include font(20px, 24px);
   }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 30px;
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+    margin-right: 58px;
   }
 }
 
 .goods__button {
   grid-column: 1;
+  align-self: end;
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+    margin-bottom: 3px;
+    margin-right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 58px;
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }

@@ -1,18 +1,35 @@
 .hit {
   position: relative;
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 0;
   padding-top: 31px;
-  padding-bottom: 0;
+  padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 40px;
-    margin-bottom: 52px;
+    padding-top: 50px;
+    padding-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 54px;
-    margin-bottom: 73px;
+    padding-top: 71px;
+    padding-bottom: 98px;
+  }
+
+  &::after {
+    @include line(100%, 6px, url("../img/bg-zigzag-line.svg"));
+    bottom: -5px;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      @include line(100%, 17px, url("../img/bg-zigzag-line.svg"));
+      bottom: -2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include line(1050px, 23px, url("../img/bg-zigzag-line.svg"));
+      left: 50px;
+      bottom: 0;
+    }
   }
 }
 
@@ -23,17 +40,21 @@
   @include font(17px, 20px);
   text-transform: uppercase;
   color: $theme-basic;
-  top: 65px;
+
+  @media (max-width: $tablet-width - 1) {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     max-width: 100px;
-    top: 46px;
-    right: 63px;
     text-align: center;
+    line-height: 17px;
+    top: 56px;
+    right: 63px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 123px;
+    top: 140px;
     left: 82px;
   }
 }

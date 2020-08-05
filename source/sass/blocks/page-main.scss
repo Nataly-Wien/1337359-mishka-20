@@ -1,13 +1,54 @@
 .page-main {
   @include reset-indent;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $grey-border;
+  }
 }
 
 .page-main__title {
-  padding: 100px 0 73px;
+  margin: 0;
+  padding: 73px 0 73px;
   text-align: center;
   color: $black;
+
+  @include font(27px, 30px);
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px);
+    padding: 103px 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px);
+    padding: 103px 0 42px;
+  }
 }
 
 .page-main__title-wrapper {
+  position: relative;
   background-color: $background-grey;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 52px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include line(100%, 25px, url("../img/bg-zigzag-fill.svg"));
+      z-index: 5;
+      left: 0;
+      bottom: -12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include line(100%, 37px, url("../img/bg-zigzag-fill.svg"));
+      bottom: -20px;
+    }
+  }
 }
