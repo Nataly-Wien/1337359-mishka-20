@@ -16,6 +16,10 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 95px;
   }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/review@2x.jpg");
+  }
 }
 
 .reviews__wrapper {

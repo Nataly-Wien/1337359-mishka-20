@@ -36,18 +36,24 @@
   }
 }
 
+.goods-cart__photo-wrapper {
+  @media (min-width: $tablet-width) {
+    flex-shrink: 0;
+  }
+}
+
 .goods-cart__photo {
   display: block;
   width: 100%;
 
-  @media (min-width: $mobile-width + 140px) {
-    width: 400px;
+  @media (min-width: $mobile-width + 100px) {
+    width: 360px;
   }
 
   @media (min-width: $tablet-width) {
     flex-shrink: 0;
-    height: 334px;
     width: 334px;
+    height: 334px;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,8 +75,8 @@
     box-shadow: 0 3px 5px rgba($black, $opacity-shadow);
   }
 
-  @media (min-width: $mobile-width + 140px) {
-    width: 400px;
+  @media (min-width: $mobile-width + 100px) {
+    width: 360px;
   }
 
   @media (min-width: $tablet-width) {

@@ -112,7 +112,14 @@
         <h2 class="visually-hidden">Список товаров каталога</h2>
         <div class="catalog__list">
           <article class="catalog__item goods-cart">
-            <img class="goods-cart__photo" src="https://via.placeholder.com/260x195" width="260" height="195" alt="">
+            <picture class="goods-cart__photo-wrapper">
+              <source media="(min-width: 1150px)"
+                srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+              <img class="goods-cart__photo" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x"
+                width="260" height="195" alt="Зайчик в голубом, связанный крючком">
+            </picture>
             <div class="goods-cart__wrapper">
               <a class="goods-cart__link" href="#">
                 <h3 class="goods-cart__title title-mini">
@@ -139,7 +146,14 @@
             </div>
           </article>
           <article class="catalog__item goods-cart">
-            <img class="goods-cart__photo" src="https://via.placeholder.com/260x195" width="260" height="195" alt="">
+            <picture class="goods-cart__photo-wrapper">
+              <source media="(min-width: 1150px)"
+                srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+              <img class="goods-cart__photo" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x"
+                width="260" height="195" alt="Бело-оранжевая вязаная корзинка для белья">
+            </picture>
             <div class="goods-cart__wrapper">
               <a class="goods-cart__link" href="#">
                 <h3 class="goods-cart__title title-mini">
@@ -166,7 +180,14 @@
             </div>
           </article>
           <article class="catalog__item goods-cart">
-            <img class="goods-cart__photo" src="https://via.placeholder.com/260x195" width="260" height="195" alt="">
+            <picture class="goods-cart__photo-wrapper">
+              <source media="(min-width: 1150px)"
+                srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+              <img class="goods-cart__photo" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x"
+                width="260" height="195" alt="Большая бело-зеленая вязаная корзина с мягкими игрушками внутри">
+            </picture>
             <div class="goods-cart__wrapper">
               <a class="goods-cart__link" href="#">
                 <h3 class="goods-cart__title title-mini">
