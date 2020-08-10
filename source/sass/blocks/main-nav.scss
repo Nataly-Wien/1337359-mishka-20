@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+  // box-shadow: 0px 4px 4px rgba($black, 0.25); для каталога?
 
   @include reset-indent;
 
@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    // box-shadow: none;
   }
 }
 
@@ -21,7 +22,6 @@
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;
-    // flex-grow: 1;
     width: 112px;
     height: 46px;
     padding: 0;

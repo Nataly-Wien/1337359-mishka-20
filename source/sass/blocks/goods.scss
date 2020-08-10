@@ -105,21 +105,13 @@
   @include reset-indent;
 }
 
-.goods__photo {
-  display: block;
+.goods__photo-wrapper {
   margin-bottom: 28px;
-  width: 100%;
-
-  @media (min-width: $mobile-width + 140px) {
-    width: 400px;
-  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2;
     grid-row-start: 2;
     grid-row-end: 6;
-    width: 334px;
-    height: 404px;
     margin-top: 15px;
     margin-bottom: 0;
   }
@@ -127,9 +119,30 @@
   @media (min-width: $desktop-width) {
     grid-row-start: 1;
     grid-row-end: 6;
+    margin-top: 0;
+  }
+}
+
+.goods__photo {
+  display: block;
+  width: 100%;
+
+  @media (min-width: $mobile-width + 140px) {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 404px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
     width: 525px;
     height: 636px;
-    margin-top: 0;
   }
 }
 

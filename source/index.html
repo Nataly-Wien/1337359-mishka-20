@@ -40,7 +40,12 @@
   <header class="page-header page-header__container">
     <nav class="main-nav">
       <a class="main-nav__logo">
-        <img class="main-nav__logo-img" src="https://via.placeholder.com/86x35" width="86" height="35" alt="">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="86" height="35"
+            alt="Логотип интернет-магазина Мишка">
+        </picture>
       </a>
       <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
       <ul class="main-nav__main-menu main-menu">
@@ -108,7 +113,13 @@
         Милые штуки ручной работы&nbsp;для&nbsp;дома
       </h2>
       <div class="promo__img-wrapper">
-        <img class="promo__img" src="https://via.placeholder.com/575x373" width="575" height="373" alt="">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/hero-desktop@1x.jpg 1x, img/hero-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/hero-tablet@1x.jpg 1x, img/hero-tablet@2x.jpg 2x">
+          <img class="promo__img" src="img/hero-mobile@1x.jpg" srcset="img/hero-mobile@2x.jpg 2x" width="575"
+            height="373"
+            alt="На полке в форме домика - милые вязаные корзинки разных размеров и расцветок с мягкими игрушками и свернутым бельем">
+        </picture>
       </div>
       <div class="promo__list-wrapper">
         <ul class="promo__list catalog-menu">
@@ -172,7 +183,16 @@
             </dd>
           </div>
         </dl>
-        <img class="goods__photo" src="https://via.placeholder.com/260x315" width="260" height="315" alt="">
+        <div class="goods__photo-wrapper">
+          <picture>
+            <source media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="goods__photo" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+              width="260" height="315" alt="Пирамида из трех корзинок разных размеров и расцветок">
+          </picture>
+        </div>
         <p class="goods__price">
           Цена: 990 руб.
         </p>
@@ -264,8 +284,13 @@
         </div>
       </dl>
       <div class="contacts__map-wrapper">
-        <img class="contacts__map-placeholder" src="https://via.placeholder.com/322x457" width="322" height="457"
-          alt="">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 330px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="contacts__map-placeholder" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"
+            width="320" height="454"
+            alt="Местоположение интернет-магазина Мишка: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </picture>
       </div>
       <a class="contacts__button button" href="#">
         Напишите нам
@@ -276,7 +301,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo">
-        <img src="https://via.placeholder.com/102x34" alt="">
+        <img src="img/logo-footer.svg" width="102" height="34" alt="Логотип интернет-магазина Мишка">
       </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Мы в социальных сетях:</h2>

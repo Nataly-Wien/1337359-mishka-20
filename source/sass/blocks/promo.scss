@@ -30,7 +30,7 @@
   align-self: center;
   max-width: 250px;
   margin: 0;
-  margin-top: 37px;
+  margin-top: 32px;
 
   @include font(27px, 30px);
   text-align: center;
@@ -66,12 +66,15 @@
   width: 575px;
   height: 373px;
   margin: 0 auto 116px;
+  object-fit: none;
+  object-position: center -18px;
 
   @media (min-width: $tablet-width) {
     width: 1150px;
     height: 746px;
     margin-bottom: 0;
     object-fit: cover;
+    object-position: center -3px;
   }
 }
 
@@ -90,6 +93,7 @@
   @media (min-width: $tablet-width) {
     padding: 0 50px;
   }
+
 
   @media (min-width: $desktop-width) {
     margin: 0 auto;
