@@ -5,7 +5,7 @@
   background-color: $background-grey;
 
   @media (min-width: $tablet-width) {
-    padding-top: 55px;
+    padding-top: 52px;
   }
 
   @media (min-width: $tablet-width) {
@@ -21,6 +21,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 
