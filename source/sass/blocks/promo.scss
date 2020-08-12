@@ -10,6 +10,7 @@
       @include line(100%, 25px, url("../img/bg-zigzag-fill.svg"));
       z-index: 5;
       left: 0;
+      background-position-x: 3px;
       bottom: -11px;
     }
 
