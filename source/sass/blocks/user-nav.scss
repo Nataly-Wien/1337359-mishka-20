@@ -13,15 +13,12 @@
 .user-nav__item {
   position: relative;
   margin: 0;
-  padding-top: 29px;
-  padding-right: 35px;
-  padding-bottom: 26px;
-  padding-left: calc(76px + (100vw - #{$mobile-width}) / 2);
+  padding: 29px 0 26px;
   box-shadow: 0 1px 0 $grey, inset 0 1px 0 $grey;
 
   @media (min-width: $tablet-width) {
     flex-shrink: 0;
-    padding: 33px 0 32px 83px;
+    padding: 33px 1px 32px 83px;
     box-shadow: none;
     border-left: 1px solid $grey-modified;
   }
@@ -29,6 +26,15 @@
 
 .user-nav__link {
   color: $black;
+
+  @media (max-width: $tablet-width - 1) {
+    display: block;
+    width: 200px;
+    padding-left: 16px;
+    padding-right: 2px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &:hover,
   &:focus {
@@ -64,7 +70,7 @@
 
 .user-nav__icon {
   position: absolute;
-  left: calc(30px + (100vw - #{$mobile-width}) / 2);
+  left: 30px;
 
   @media (min-width: $tablet-width) {
     left: 32px;

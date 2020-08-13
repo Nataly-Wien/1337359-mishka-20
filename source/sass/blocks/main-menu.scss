@@ -24,10 +24,7 @@ $padding: 26px;
 .main-menu__item {
   @include font(17px, $lineheight);
   margin: 0;
-  padding-top: 29px;
-  padding-right: 35px;
-  padding-bottom: $padding;
-  padding-left: calc(76px + (100vw - #{$mobile-width}) / 2);
+  padding: 29px 0 $padding;
   box-shadow: 0 1px 0 $grey, inset 0 1px 0 $grey;
 
   @media (min-width: $tablet-width) {
@@ -84,6 +81,15 @@ $padding: 26px;
 
 .main-menu__link {
   color: $black;
+
+  @media (max-width: $tablet-width - 1) {
+    display: block;
+    width: 200px;
+    padding-left: 16px;
+    padding-right: 2px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   &:hover,
   &:focus {

@@ -28,11 +28,6 @@
 .page-main__title-wrapper {
   position: relative;
   background-color: $background-grey;
-  margin-bottom: 30px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 52px;
