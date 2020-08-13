@@ -361,9 +361,7 @@
   .order-form__control:hover + &,
   .order-form__control:focus + &,
   .order-form__control:active + & {
-    path {
-      fill: $theme-modified;
-    }
+    fill: $theme-modified;
   }
 }
 

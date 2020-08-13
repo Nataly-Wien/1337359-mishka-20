@@ -39,18 +39,10 @@
   &:hover,
   &:focus {
     color: rgba($black, $opacity-hover);
-
-    path {
-      fill: $theme-basic;
-    }
   }
 
   &:active {
     color: rgba($black, $opacity-active);
-
-    path {
-      fill: rgba($theme-basic, $opacity-active);
-    }
   }
 }
 
@@ -71,6 +63,7 @@
 .user-nav__icon {
   position: absolute;
   left: 30px;
+  fill: rgba($black, $opacity-icon);
 
   @media (min-width: $tablet-width) {
     left: 32px;
@@ -79,5 +72,14 @@
       left: 33px;
       top: 35px;
     }
+  }
+
+  .user-nav__link:hover &,
+  .user-nav__link:focus & {
+    fill: $theme-basic;
+  }
+
+  .user-nav__link:active & {
+    fill: rgba($theme-basic, $opacity-active);
   }
 }

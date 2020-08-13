@@ -35,15 +35,15 @@
   }
 }
 
-.social__link:hover,
-.social__link:focus {
-  path {
+.social__icon {
+  fill: $black;
+
+  &:hover,
+  &:focus {
     fill: $theme-dark-hover;
   }
-}
 
-.social__link:active {
-  path {
+  &:active {
     fill: rgba($theme-dark-hover, $opacity-active);
   }
 }
