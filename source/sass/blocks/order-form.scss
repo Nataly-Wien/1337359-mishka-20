@@ -353,6 +353,7 @@
   position: absolute;
   right: 6px;
   top: 3px;
+  fill: rgba($black, $opacity-icon);
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     right: 26px;
