@@ -153,15 +153,19 @@
   height: 36px;
   text-align: right;
 
+  svg {
+    fill: rgba($black, $opacity-icon);
+  }
+
   &:hover,
   &:focus {
-    path {
+    svg {
       fill: $theme-basic;
     }
   }
 
   &:active {
-    path {
+    svg {
       fill: rgba($theme-basic, $opacity-active);
     }
   }

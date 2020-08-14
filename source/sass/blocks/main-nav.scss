@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // box-shadow: 0px 4px 4px rgba($black, 0.25); для каталога?
 
   @include reset-indent;
 
@@ -11,7 +10,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    // box-shadow: none;
   }
 }
 
@@ -33,6 +31,15 @@
     width: 148px;
     height: 72px;
     padding-top: 9px;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: $opacity-hover;
+  }
+
+  &[href]:active {
+    opacity: $opacity-active;
   }
 }
 

@@ -28,13 +28,13 @@
 
   &:hover,
   &:focus {
-    path {
+    svg {
       fill: $theme-dark-hover;
     }
   }
 
   &:active {
-    path {
+    svg {
       fill: rgba($theme-dark-hover, $opacity-active);
     }
   }

@@ -33,4 +33,21 @@
   @media (min-width: $tablet-width) {
     flex-shrink: 0;
   }
+
+  svg {
+    fill: $black;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    svg {
+      fill: $theme-dark-hover;
+    }
+  }
+
+  &[href]:active {
+    svg {
+      fill: rgba($theme-dark, $opacity-active);
+    }
+  }
 }
