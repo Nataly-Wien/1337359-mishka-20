@@ -13,7 +13,7 @@ const webp = require('gulp-webp');
 const del = require('del');
 const sync = require("browser-sync").create();
 
-var path = {
+const path = {
   src: {
     html: 'source/*.html',
     css: 'source/sass/style.scss',
@@ -112,8 +112,17 @@ const copy = () => {
 
 exports.copy = copy;
 
+const build = gulp.series(
+  clean,
+  copy,
+  styles,
+  sprite,
+  html
+);
+exports.build = build;
+
 // const build = () => {
-//   gulp.series(
+//   return gulp.series(
 //     clean,
 //     copy,
 //     styles,
@@ -121,16 +130,15 @@ exports.copy = copy;
 //     html
 //   );
 // }
-
 // exports.build = build;
 
-exports.build = gulp.series(
-  clean,
-  copy,
-  styles,
-  sprite,
-  html
-);
+// exports.build = gulp.series(
+//   clean,
+//   copy,
+//   styles,
+//   sprite,
+//   html
+// );
 
 const server = (done) => {
   sync.init({
