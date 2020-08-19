@@ -163,10 +163,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid $grey;
-
-  @media (min-width: $tablet-width) {
-    width: 88px;
-  }
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -184,6 +181,11 @@
 
   &--forward {
     background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+    border: none;
   }
 }
 
