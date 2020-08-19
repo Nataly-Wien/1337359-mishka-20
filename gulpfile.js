@@ -28,9 +28,9 @@ const path = {
     img: 'build/img'
   },
   watch: {
-    scss: 'build/sass/**/*.scss',
-    html: 'build/*.html',
-    js: 'build/js/**/*.js'
+    scss: 'source/sass/**/*.scss',
+    html: 'source/*.html',
+    js: 'source/js/**/*.js'
   },
   basedir: 'build'
 }
@@ -53,9 +53,10 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest(path.dest.css))
-    .pipe(csso())
     .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest(path.dest.css))
+    .pipe(sync.stream())
+    .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest(path.dest.css))
     .pipe(sync.stream());
@@ -119,26 +120,8 @@ const build = gulp.series(
   sprite,
   html
 );
+
 exports.build = build;
-
-// const build = () => {
-//   return gulp.series(
-//     clean,
-//     copy,
-//     styles,
-//     sprite,
-//     html
-//   );
-// }
-// exports.build = build;
-
-// exports.build = gulp.series(
-//   clean,
-//   copy,
-//   styles,
-//   sprite,
-//   html
-// );
 
 const server = (done) => {
   sync.init({
@@ -156,6 +139,8 @@ const watcher = () => {
   gulp.watch(path.watch.scss, gulp.series(styles));
   gulp.watch(path.watch.html, gulp.series(html));
 }
+
+exports.watcher = watcher;
 
 exports.default = gulp.series(
   build,
