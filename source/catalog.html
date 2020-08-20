@@ -47,7 +47,17 @@
             alt="Логотип интернет-магазина Мишка">
         </picture>
       </a>
-      <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
+      <!-- Кнопка для переключения меню для мобильной версии: button class="main-nav__button"
+              - открытое меню при отключённом JavaScript - присутствует дополнительный класс main-nav__button--hidden;
+              - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--cross;
+              - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--burger. -->
+      <button class="main-nav__button main-nav__button--hidden" type="button">
+        <span aria-label="Меню сайта"></span>
+      </button>
+      <!-- Главное меню для мобильной версии: ul class="main-nav__main-menu"
+                          - открытое меню при включённом JavaScript - нет дополнительных классов;
+                          - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--open-over;
+                          - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--closed. -->
       <ul class="main-nav__main-menu main-menu">
         <li class="main-menu__item main-menu__item--different-size">
           <a class="main-menu__link main-menu__link--active">
@@ -70,6 +80,10 @@
           </a>
         </li>
       </ul>
+      <!-- Пользовательское меню для мобильной версии: ul class="main-nav__user-nav"
+                                - закрытое меню при включённом JavaScript - нет дополнительных классов;
+                                - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--open-over;
+                                - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--closed. -->
       <ul class="main-nav__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
@@ -322,5 +336,6 @@
   </section>
 
 </body>
+<script src="js/script.js"></script>
 
 </html>

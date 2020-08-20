@@ -1,3 +1,27 @@
+let menuButton = document.querySelector('.main-nav__button');
+let mainMenu = document.querySelector('.main-nav__main-menu');
+let userNav = document.querySelector('.main-nav__user-nav');
+
+console.log(menuButton)
+
+window.onload = function (evt) {
+  if (menuButton.classList.contains('main-nav__button--hidden')) {
+    menuButton.classList.remove('main-nav__button--hidden');
+  }
+  menuButton.classList.add('main-nav__button--burger');
+  mainMenu.classList.add('main-nav__main-menu--closed');
+  userNav.classList.add('main-nav__user-nav--closed');
+}
+
+menuButton.addEventListener('click', function (evt) {
+  menuButton.classList.toggle('main-nav__button--burger');
+  menuButton.classList.toggle('main-nav__button--cross');
+  mainMenu.classList.toggle('main-nav__main-menu--closed');
+  mainMenu.classList.toggle('main-nav__main-menu--open-over');
+  userNav.classList.toggle('main-nav__user-nav--closed');
+  userNav.classList.toggle('main-nav__user-nav--open-over');
+});
+
 ymaps.ready(function () {
   let north;
   let east;

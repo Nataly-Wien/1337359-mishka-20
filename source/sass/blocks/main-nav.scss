@@ -68,6 +68,23 @@
     order: 0;
     flex-basis: 42%;
   }
+
+  &--closed {
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+    }
+  }
+
+  &--open-over {
+    @media (max-width: $tablet-width - 1) {
+      display: block;
+      position: absolute;
+      z-index: 7;
+      background-color: $white;
+      width: 100%;
+      top: 79px;
+    }
+  }
 }
 
 .main-nav__user-nav {
@@ -80,6 +97,23 @@
   @media (min-width: $desktop-width) {
     order: 2;
     flex-basis: 42%;
+  }
+
+  &--closed {
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+    }
+  }
+
+  &--open-over {
+    @media (max-width: $tablet-width - 1) {
+      display: block;
+      position: absolute;
+      z-index: 7;
+      background-color: $white;
+      width: 100%;
+      top: 235px;
+    }
   }
 }
 
@@ -115,48 +149,6 @@
   border: none;
   background-color: transparent;
 
-  // Бургер
-
-  // &::before {
-  //   @include pseudo;
-  //   width: 20px;
-  //   height: 2px;
-  //   top: 8px;
-  //   left: 4px;
-  //   background-color: $black;
-  //   box-shadow: 0 4px 0 0 $black;
-  // }
-
-  // &::after {
-  //   @include pseudo;
-  //   width: 20px;
-  //   height: 2px;
-  //   top: 16px;
-  //   left: 4px;
-  //   background-color: $black;
-  // }
-
-  &::before {
-    @include pseudo;
-    width: 28px;
-    height: 2px;
-    top: 14px;
-    left: 0;
-    background-color: $black;
-    box-shadow: 0 4px 0 0 transparent;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    @include pseudo;
-    width: 28px;
-    height: 2px;
-    top: 14px;
-    left: 0;
-    background-color: $black;
-    transform: rotate(-45deg);
-  }
-
   &:hover,
   &:focus {
     opacity: $opacity-hover;
@@ -167,6 +159,56 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &--cross {
+    &::before {
+      @include pseudo;
+      width: 28px;
+      height: 2px;
+      top: 14px;
+      left: 0;
+      background-color: $black;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      @include pseudo;
+      width: 28px;
+      height: 2px;
+      top: 14px;
+      left: 0;
+      background-color: $black;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--burger {
+    &::before,
+    &::after,
+    span::after {
+      @include pseudo;
+      width: 20px;
+      height: 2px;
+      left: 4px;
+      background-color: $black;
+    }
+
+    &::before {
+      top: 8px;
+    }
+
+    &::after {
+      top: 14px;
+    }
+
+    span::after {
+      top: 20px;
+    }
+  }
+
+  &--hidden {
     display: none;
   }
 }
