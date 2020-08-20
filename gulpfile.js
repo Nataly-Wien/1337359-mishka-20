@@ -25,7 +25,8 @@ const path = {
   dest: {
     html: 'build',
     css: 'build/css',
-    img: 'build/img'
+    img: 'build/img',
+    js: 'build/js'
   },
   watch: {
     scss: 'source/sass/**/*.scss',
@@ -63,6 +64,14 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+const scripts = () => {
+  return gulp.src(path.src.js)
+    .pipe(gulp.dest(path.dest.js))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
 
 const images = () => {
   return gulp.src('source/img/**/*.{jpg,png,svg}')
@@ -117,6 +126,7 @@ const build = gulp.series(
   clean,
   copy,
   styles,
+  scripts,
   sprite,
   html
 );
@@ -139,8 +149,6 @@ const watcher = () => {
   gulp.watch(path.watch.scss, gulp.series(styles));
   gulp.watch(path.watch.html, gulp.series(html));
 }
-
-exports.watcher = watcher;
 
 exports.default = gulp.series(
   build,

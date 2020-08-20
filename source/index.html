@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=9395d110-4f09-40cd-926b-3aa3056fde37&lang=ru_RU"
+    type="text/javascript"></script>
   <!-- Pixel Glass -->
   <style>
     HTML {
@@ -291,7 +293,7 @@
         <picture>
           <source type="image/webp" media="(min-width: 1150px)"
             srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
+          <source type="image/webp" media="(min-width: 330px)"
             srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
@@ -300,6 +302,7 @@
             width="320" height="454"
             alt="Местоположение интернет-магазина Мишка: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
+        <div class="contacts__map-container" id="map"></div>
       </div>
       <a class="contacts__button button" href="#">
         Напишите нам
@@ -375,6 +378,7 @@
       <button class="choice-form__button button button--theme-color" type="submit">Добавить</button>
     </form>
   </section>
+  <script src="js/script.js"></script>
 
 </body>
 
