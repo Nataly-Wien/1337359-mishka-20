@@ -8,4 +8,10 @@
   font-family: "Open Sans", "Arial", sans-serif;
   color: $text-dark;
   background-color: $white;
+
+  &--modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

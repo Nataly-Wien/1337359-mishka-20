@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=9395d110-4f09-40cd-926b-3aa3056fde37&lang=ru_RU"
+    type="text/javascript"></script>
   <!-- Pixel Glass -->
   <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      background-image: url("pixelglass/index-mobile.png");
+      background-image: url("pixelglass/index-mobile-menu_close.png");
     }
 
     /* Планшет */
@@ -47,7 +49,17 @@
             alt="Логотип интернет-магазина Мишка">
         </picture>
       </a>
-      <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
+      <!-- Кнопка для переключения меню для мобильной версии: button class="main-nav__button"
+        - открытое меню при отключённом JavaScript - присутствует дополнительный класс main-nav__button--hidden;
+        - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--cross;
+        - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--burger. -->
+      <button class="main-nav__button main-nav__button--hidden" type="button">
+        <span aria-label="Меню сайта"></span>
+      </button>
+      <!-- Главное меню для мобильной версии: ul class="main-nav__main-menu"
+                    - открытое меню при включённом JavaScript - нет дополнительных классов;
+                    - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--open-over;
+                    - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--closed. -->
       <ul class="main-nav__main-menu main-menu">
         <li class="main-menu__item main-menu__item--different-size">
           <a class="main-menu__link" href="catalog.html">
@@ -70,6 +82,10 @@
           </a>
         </li>
       </ul>
+      <!-- Пользовательское меню для мобильной версии: ul class="main-nav__user-nav"
+                          - закрытое меню при включённом JavaScript - нет дополнительных классов;
+                          - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--open-over;
+                          - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--closed. -->
       <ul class="main-nav__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
@@ -200,7 +216,7 @@
         <p class="goods__price">
           Цена: 990 руб.
         </p>
-        <a class="goods__button button" href="modal.html">
+        <a class="goods__button button order-button" href="modal.html">
           Заказать
         </a>
       </article>
@@ -291,7 +307,7 @@
         <picture>
           <source type="image/webp" media="(min-width: 1150px)"
             srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
+          <source type="image/webp" media="(min-width: 330px)"
             srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
@@ -300,6 +316,7 @@
             width="320" height="454"
             alt="Местоположение интернет-магазина Мишка: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
+        <div class="contacts__map-container" id="map"></div>
       </div>
       <a class="contacts__button button" href="#">
         Напишите нам
@@ -357,24 +374,29 @@
     </div>
   </footer>
 
-  <section class="modal container">
-    <h2 class="modal__title">Добавить в корзину</h2>
-    <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="choice-form__choice-block">
-        <legend class="choice-form__text">Выберите размер:</legend>
-        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice1" value="s"
-          aria-label="маленький" checked>
-        <label class="choice-form__label" for="choice1">S</label>
-        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice2" value="m"
-          aria-label="средний">
-        <label class="choice-form__label" for="choice2">M</label>
-        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice3" value="l"
-          aria-label="большой">
-        <label class="choice-form__label" for="choice3">L</label>
-      </fieldset>
-      <button class="choice-form__button button button--theme-color" type="submit">Добавить</button>
-    </form>
+  <section class="modal overlay">
+    <div class="modal__window">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="choice-form__choice-block">
+          <legend class="choice-form__text">Выберите размер:</legend>
+          <div class="choice-form__choice-block-wrapper">
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice1" value="s"
+              aria-label="маленький" checked>
+            <label class="choice-form__label" for="choice1">S</label>
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice2" value="m"
+              aria-label="средний">
+            <label class="choice-form__label" for="choice2">M</label>
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice3" value="l"
+              aria-label="большой">
+            <label class="choice-form__label" for="choice3">L</label>
+          </div>
+        </fieldset>
+        <button class="choice-form__button button button--theme-color" type="submit">Добавить</button>
+      </form>
+    </div>
   </section>
+  <script src="js/script.js"></script>
 
 </body>
 

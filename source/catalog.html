@@ -47,7 +47,17 @@
             alt="Логотип интернет-магазина Мишка">
         </picture>
       </a>
-      <button class="main-nav__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
+      <!-- Кнопка для переключения меню для мобильной версии: button class="main-nav__button"
+              - открытое меню при отключённом JavaScript - присутствует дополнительный класс main-nav__button--hidden;
+              - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--cross;
+              - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--burger. -->
+      <button class="main-nav__button main-nav__button--hidden" type="button">
+        <span aria-label="Меню сайта"></span>
+      </button>
+      <!-- Главное меню для мобильной версии: ul class="main-nav__main-menu"
+                          - открытое меню при включённом JavaScript - нет дополнительных классов;
+                          - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--open-over;
+                          - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--closed. -->
       <ul class="main-nav__main-menu main-menu">
         <li class="main-menu__item main-menu__item--different-size">
           <a class="main-menu__link main-menu__link--active">
@@ -70,6 +80,10 @@
           </a>
         </li>
       </ul>
+      <!-- Пользовательское меню для мобильной версии: ul class="main-nav__user-nav"
+                                - закрытое меню при включённом JavaScript - нет дополнительных классов;
+                                - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--open-over;
+                                - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--closed. -->
       <ul class="main-nav__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
@@ -140,7 +154,7 @@
                 <p class="goods-cart__price">
                   1 200 руб.
                 </p>
-                <a class="goods-cart__button" href="modal.html">
+                <a class="goods-cart__button order-button" href="modal.html">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20.294" height="18.849">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -176,7 +190,7 @@
                 <p class="goods-cart__price">
                   690 руб.
                 </p>
-                <a class="goods-cart__button" href="modal.html">
+                <a class="goods-cart__button order-button" href="modal.html">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20.294" height="18.849">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -212,7 +226,7 @@
                 <p class="goods-cart__price">
                   1 500 руб.
                 </p>
-                <a class="goods-cart__button" href="modal.html">
+                <a class="goods-cart__button order-button" href="modal.html">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20.294" height="18.849">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -302,25 +316,30 @@
     </div>
   </footer>
 
-  <section class="modal container">
-    <h2 class="modal__title">Добавить в корзину</h2>
-    <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="choice-form__choice-block">
-        <legend class="choice-form__text">Выберите размер:</legend>
-        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice1" value="s"
-          aria-label="маленький" checked>
-        <label class="choice-form__label" for="choice1">S</label>
-        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice2" value="m"
-          aria-label="средний">
-        <label class="choice-form__label" for="choice2">M</label>
-        <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice3" value="l"
-          aria-label="большой">
-        <label class="choice-form__label" for="choice3">L</label>
-      </fieldset>
-      <button class="choice-form__button button button--theme-color" type="submit">Добавить</button>
-    </form>
+  <section class="modal overlay">
+    <div class="modal__window">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="choice-form__choice-block">
+          <legend class="choice-form__text">Выберите размер:</legend>
+          <div class="choice-form__choice-block-wrapper">
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice1" value="s"
+              aria-label="маленький" checked>
+            <label class="choice-form__label" for="choice1">S</label>
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice2" value="m"
+              aria-label="средний">
+            <label class="choice-form__label" for="choice2">M</label>
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice3" value="l"
+              aria-label="большой">
+            <label class="choice-form__label" for="choice3">L</label>
+          </div>
+        </fieldset>
+        <button class="choice-form__button button button--theme-color" type="submit">Добавить</button>
+      </form>
+    </div>
   </section>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,36 @@
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &--show {
+    display: flex;
+  }
+}
+
+.modal__window {
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $grey-modal;
+  padding: 28px 30px 46px;
+  box-shadow: 0 5px 10px $window-shadow;
+
+  @media (min-width: 600px) {
+    width: 566px;
+    padding: 35px 105px 46px;
+  }
+}
+
 .modal__title {
-  @include font(25px, 30px);
+  margin: 0 0 15px;
   text-transform: uppercase;
   text-align: center;
 
+  @include font(25px, 30px);
+
   @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+
     @include font(30px, 57px);
   }
 }
