@@ -6,36 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=9395d110-4f09-40cd-926b-3aa3056fde37&lang=ru_RU"
     type="text/javascript"></script>
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("pixelglass/index-mobile-menu_close.png");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("pixelglass/index-tablet.png");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1150px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("pixelglass/index-desktop.png");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
 </head>
 
 <body class="page">
@@ -53,8 +27,8 @@
         - открытое меню при отключённом JavaScript - присутствует дополнительный класс main-nav__button--hidden;
         - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--cross;
         - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--burger. -->
-      <button class="main-nav__button main-nav__button--hidden" type="button">
-        <span aria-label="Меню сайта"></span>
+      <button class="main-nav__button main-nav__button--hidden" type="button" aria-label="Меню сайта">
+        <span></span>
       </button>
       <!-- Главное меню для мобильной версии: ul class="main-nav__main-menu"
                     - открытое меню при включённом JavaScript - нет дополнительных классов;

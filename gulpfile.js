@@ -11,6 +11,7 @@ const svgstore = require('gulp-svgstore');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const del = require('del');
+const terser = require('gulp-terser');
 const sync = require("browser-sync").create();
 
 const path = {
@@ -19,7 +20,7 @@ const path = {
     css: 'source/sass/style.scss',
     fonts: 'source/fonts/**/*',
     img: 'source/img/*.*',
-    js: 'source/js/**',
+    js: 'source/js/**/*.js',
     favicon: 'source/*.ico'
   },
   dest: {
@@ -67,6 +68,10 @@ exports.styles = styles;
 
 const scripts = () => {
   return gulp.src(path.src.js)
+    .pipe(gulp.dest(path.dest.js))
+    .pipe(sync.stream())
+    .pipe(terser())
+    .pipe(rename('script.min.js'))
     .pipe(gulp.dest(path.dest.js))
     .pipe(sync.stream());
 }

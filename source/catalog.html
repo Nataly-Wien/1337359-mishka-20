@@ -6,34 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка (страница каталога)</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("pixelglass/catalog-mobile.png");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("pixelglass/catalog-tablet.png");
-      }
-    }
-
-    /* Десктоп */
-    @media (min-width: 1150px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("pixelglass/catalog-desktop.png");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 
 <body class="page">
@@ -47,17 +21,9 @@
             alt="Логотип интернет-магазина Мишка">
         </picture>
       </a>
-      <!-- Кнопка для переключения меню для мобильной версии: button class="main-nav__button"
-              - открытое меню при отключённом JavaScript - присутствует дополнительный класс main-nav__button--hidden;
-              - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--cross;
-              - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__button--burger. -->
-      <button class="main-nav__button main-nav__button--hidden" type="button">
-        <span aria-label="Меню сайта"></span>
+      <button class="main-nav__button main-nav__button--hidden" type="button" aria-label="Меню сайта">
+        <span></span>
       </button>
-      <!-- Главное меню для мобильной версии: ul class="main-nav__main-menu"
-                          - открытое меню при включённом JavaScript - нет дополнительных классов;
-                          - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--open-over;
-                          - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__main-menu--closed. -->
       <ul class="main-nav__main-menu main-menu">
         <li class="main-menu__item main-menu__item--different-size">
           <a class="main-menu__link main-menu__link--active">
@@ -80,10 +46,6 @@
           </a>
         </li>
       </ul>
-      <!-- Пользовательское меню для мобильной версии: ul class="main-nav__user-nav"
-                                - закрытое меню при включённом JavaScript - нет дополнительных классов;
-                                - открытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--open-over;
-                                - закрытое меню при включённом JavaScript - присутствует дополнительный класс main-nav__user-nav--closed. -->
       <ul class="main-nav__user-nav user-nav">
         <li class="user-nav__item">
           <a class="user-nav__link" href="#">
