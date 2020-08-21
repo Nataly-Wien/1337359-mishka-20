@@ -148,6 +148,7 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch(path.watch.scss, gulp.series(styles));
   gulp.watch(path.watch.html, gulp.series(html));
+  gulp.watch(path.watch.js, gulp.series(scripts));
 }
 
 exports.default = gulp.series(

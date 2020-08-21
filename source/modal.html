@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="page page--modal">
+  <section class="modal modal--show">
+    <div class="modal__window">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <form class="modal__form choice-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="choice-form__choice-block">
+          <legend class="choice-form__text">Выберите размер:</legend>
+          <div class="choice-form__choice-block-wrapper">
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice1" value="s"
+              aria-label="маленький" checked>
+            <label class="choice-form__label" for="choice1">S</label>
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice2" value="m"
+              aria-label="средний">
+            <label class="choice-form__label" for="choice2">M</label>
+            <input class="choice-form__choice-button visually-hidden" type="radio" name="choice" id="choice3" value="l"
+              aria-label="большой">
+            <label class="choice-form__label" for="choice3">L</label>
+          </div>
+        </fieldset>
+        <button class="choice-form__button button button--theme-color" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
