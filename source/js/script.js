@@ -18,6 +18,7 @@ window.onload = function (evt) {
   menuButton.classList.add('main-nav__button--burger');
   mainMenu.classList.add('main-nav__main-menu--closed');
   userNav.classList.add('main-nav__user-nav--closed');
+  userNav.style.setProperty('top', document.querySelectorAll('.main-menu__item:not(.main-menu__item--desktop)').length * 78 + 79 + 'px');
 }
 
 menuButton.addEventListener('click', function (evt) {
