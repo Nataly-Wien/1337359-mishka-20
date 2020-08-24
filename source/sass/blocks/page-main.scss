@@ -8,7 +8,7 @@
 
 .page-main__title {
   margin: 0;
-  padding: 73px 0 73px;
+  padding: 73px 20px 73px;
   text-align: center;
   color: $black;
 
@@ -16,12 +16,12 @@
 
   @media (min-width: $tablet-width) {
     @include font(43px, 50px);
-    padding: 101px 0 70px;
+    padding: 101px 50px 70px;
   }
 
   @media (min-width: $desktop-width) {
     @include font(53px, 57px);
-    padding: 101px 0 42px;
+    padding: 101px 100px 42px;
   }
 }
 

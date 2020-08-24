@@ -3,6 +3,7 @@ let mainMenu = document.querySelector('.main-nav__main-menu');
 let userNav = document.querySelector('.main-nav__user-nav');
 let orderButtons = document.querySelectorAll('.order-button');
 let formSizeButton = document.querySelector('.choice-form__choice-button');
+let submitButton = document.querySelector('.choice-form__button:checked');
 let modalOverlay = document.querySelector('.modal');
 let modalWindow = document.querySelector('.modal__window');
 let modalForm = document.querySelector('.modal__form');

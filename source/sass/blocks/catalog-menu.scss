@@ -78,9 +78,6 @@
     @media (min-width: $tablet-width) {
       background-position: 34px 5px;
     }
-
-    // @media (min-width: $desktop-width) {
-    // }
   }
 
   &--toy::after {
@@ -90,17 +87,17 @@
     @media (min-width: $tablet-width) {
       background-position: 17px 7px;
     }
-
-    // @media (min-width: $desktop-width) {
-    // }
   }
 
-  &:hover::after,
-  &:focus::after {
+  &:hover::after {
     opacity: 0.7;
   }
 
-  &:active::after {
+  .catalog-menu__link:focus &::after {
+    opacity: 0.7;
+  }
+
+  .catalog-menu__link:active &::after {
     opacity: $opacity-active;
   }
 }
@@ -108,6 +105,7 @@
 .catalog-menu__text {
   max-width: 130px;
   margin: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     max-width: 160px;

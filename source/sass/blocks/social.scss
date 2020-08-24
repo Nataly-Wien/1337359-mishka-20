@@ -8,7 +8,6 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 3px;
-    margin-left: 75px;
   }
 }
 
@@ -38,12 +37,15 @@
 .social__icon {
   fill: $black;
 
-  &:hover,
-  &:focus {
+  &:hover {
     fill: $theme-dark-hover;
   }
 
-  &:active {
+  .social__link:focus & {
+    fill: $theme-dark-hover;
+  }
+
+  .social__link:active & {
     fill: rgba($theme-dark-hover, $opacity-active);
   }
 }

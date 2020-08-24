@@ -35,8 +35,7 @@
     border: 2px solid rgba($text-dark, $opacity-active);
   }
 
-  .choice-form__choice-button:checked + &,
-  .choice-form__choice-button:focus + & {
+  .choice-form__choice-button:checked + & {
     border: 2px solid $theme-modified;
   }
 
