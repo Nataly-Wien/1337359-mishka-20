@@ -35,12 +35,15 @@
     margin-bottom: 0;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: rgba($black, $opacity-hover);
   }
 
-  &:active {
+  .goods-cart__link:focus & {
+    color: rgba($black, $opacity-hover);
+  }
+
+  .goods-cart__link:active & {
     color: rgba($black, $opacity-active);
   }
 }

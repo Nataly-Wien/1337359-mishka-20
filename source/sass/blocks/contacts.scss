@@ -26,28 +26,10 @@
   @include font(18px, 30px);
   color: $black;
 
-  &::after {
-    @media (min-width: $tablet-width) {
-      @include pseudo(block, relative, "");
-      width: 47px;
-      height: 81px;
-      top: -25px;
-      background-image: url("../img/icon-flag.svg");
-      background-repeat: no-repeat;
-    }
-
-    @media (min-width: $desktop-width) {
-      position: absolute;
-      top: -18px;
-      left: -112px;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: 48px;
+    padding-right: 100px;
 
     @include font(43px, 50px);
   }
@@ -58,8 +40,26 @@
     align-self: end;
     margin-top: 40px;
     margin-bottom: 0;
+    padding-right: 0;
 
     @include font(53px, 57px);
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      @include pseudo;
+      width: 47px;
+      height: 81px;
+      top: -24px;
+      right: 3px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -16px;
+      left: -112px;
+    }
   }
 }
 

@@ -67,6 +67,7 @@
 .reviews__title {
   @media (min-width: $tablet-width) {
     margin-bottom: -72px;
+    margin-right: 250px;
   }
 
   @media (min-width: $desktop-width) {
@@ -79,7 +80,7 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 70% 30%;
     grid-template-rows: min-content min-content;
     grid-row-gap: 40px;
     margin-top: 20px;
@@ -121,7 +122,9 @@
   font-style: normal;
   color: $black;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-right: 250px;
     font-size: 18px;
   }
 
@@ -135,6 +138,10 @@
   padding-top: 2px;
 
   @include font(17px, 30px, normal);
+
+  @media (min-width: $tablet-width) {
+    margin-right: 250px;
+  }
 }
 
 .reviews__controls {

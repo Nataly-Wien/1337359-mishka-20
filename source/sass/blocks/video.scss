@@ -7,6 +7,10 @@
     box-shadow: 0 6px 10px rgba($black, $opacity-shadow);
   }
 
+  &:active {
+    box-shadow: 0 3px 5px rgba($black, $opacity-shadow);
+  }
+
   @media (min-width: $mobile-catalog-width) {
     width: $mobile-catalog-width - 100;
     margin-left: auto;
@@ -170,7 +174,7 @@
   align-self: center;
   max-width: none;
   width: auto;
-  padding: 14px 24px;
+  padding: 15px 24px;
 
   @media (min-width: $tablet-width) {
     max-width: none;

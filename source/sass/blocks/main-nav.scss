@@ -90,7 +90,7 @@
 .main-nav__user-nav {
   @media (min-width: $tablet-width) {
     order: 1;
-    flex-basis: 50%;
+    flex-basis: 80%;
     align-self: flex-start;
   }
 
@@ -129,11 +129,14 @@
   }
 
   @media (min-width: $tablet-width) {
+    flex-basis: 40%;
+    text-align: right;
     order: 3;
     padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
+    flex-basis: 50%;
     align-self: flex-end;
     margin-left: auto;
     padding-top: 2px;

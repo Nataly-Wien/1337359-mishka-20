@@ -2,7 +2,7 @@ let menuButton = document.querySelector('.main-nav__button');
 let mainMenu = document.querySelector('.main-nav__main-menu');
 let userNav = document.querySelector('.main-nav__user-nav');
 let orderButtons = document.querySelectorAll('.order-button');
-let formSizeButton = document.querySelector('.choice-form__choice-button');
+let formSizeButton = document.querySelector('.choice-form__choice-button:checked');
 let modalOverlay = document.querySelector('.modal');
 let modalWindow = document.querySelector('.modal__window');
 let modalForm = document.querySelector('.modal__form');
@@ -18,6 +18,7 @@ window.onload = function (evt) {
   menuButton.classList.add('main-nav__button--burger');
   mainMenu.classList.add('main-nav__main-menu--closed');
   userNav.classList.add('main-nav__user-nav--closed');
+  userNav.style.setProperty('top', document.querySelectorAll('.main-menu__item:not(.main-menu__item--desktop)').length * 78 + 79 + 'px');
 }
 
 menuButton.addEventListener('click', function (evt) {
