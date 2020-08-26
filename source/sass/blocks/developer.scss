@@ -19,6 +19,10 @@
     margin: 0;
     margin-right: 28px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 30px;
+  }
 }
 
 .developer__logo {

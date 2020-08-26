@@ -107,7 +107,7 @@
   @include font(15px, 30px, normal);
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 61px;
+    margin-bottom: 60px;
     font-size: 17px;
   }
 
@@ -149,7 +149,7 @@
   justify-content: space-around;
 
   @include reset-indent;
-  margin-top: 30px;
+  margin-top: 32px;
   margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {

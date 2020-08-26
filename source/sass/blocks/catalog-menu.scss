@@ -14,24 +14,25 @@
 
 .catalog-menu__item {
   margin: 0;
+  margin-bottom: -5px;
 
   &:nth-child(1) {
     background-color: $theme-basic;
 
-    &:hover,
-    &:focus,
-    &:active {
+    & .catalog-menu__link:hover:not(:focus),
+    & .catalog-menu__link:focus {
       background-color: $theme-basic-hover;
+      transform: translateY(-5px);
     }
   }
 
   &:nth-child(2) {
     background-color: $theme-dark;
 
-    &:hover,
-    &:focus,
-    &:active {
+    & .catalog-menu__link:hover:not(:focus),
+    & .catalog-menu__link:focus {
       background-color: $theme-dark-hover;
+      transform: translateY(-5px);
     }
   }
 
@@ -45,17 +46,14 @@
   display: block;
   width: 100%;
   color: $white;
+  padding: 23px 27px 5px 30px;
 
-  @media (max-width: $tablet-width - 1) {
-    padding: 23px 27px 0 30px;
+  @media (min-width: $tablet-width) {
+    padding: 26px 30px 20px 36px;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 26px 30px 15px 36px;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 25px 30px 15px 36px;
+    padding: 25px 30px 20px 36px;
   }
 }
 

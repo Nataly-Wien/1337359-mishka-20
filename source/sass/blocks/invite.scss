@@ -8,7 +8,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 70px;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
 
     @include font(17px, 30px, normal);
   }
@@ -17,5 +17,6 @@
     padding-top: 120px;
     margin-left: 175px;
     margin-right: 175px;
+    margin-bottom: 10px;
   }
 }
