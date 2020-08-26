@@ -2,7 +2,7 @@
   @include reset-indent;
   display: flex;
   flex-direction: column;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 
   @media (min-width: $mobile-catalog-width) and (max-width: $tablet-width) {
     width: $mobile-catalog-width - 100;

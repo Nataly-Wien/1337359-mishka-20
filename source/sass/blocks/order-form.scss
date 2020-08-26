@@ -90,6 +90,15 @@
     @media (min-width: $tablet-width) {
       padding-left: 20px;
     }
+
+    &[type="tel"],
+    &[type="email"] {
+      padding-right: 50px;
+
+      @media (min-width: $tablet-width) {
+        padding-right: 80px;
+      }
+    }
   }
 }
 
@@ -374,7 +383,7 @@
   color: $text-dark;
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $tablet-width) {
